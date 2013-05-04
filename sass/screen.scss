@@ -1,13 +1,8 @@
-@import "common";
+@import "fonts";
+@import "common"; //resets etc
+
 @import "layouts";
+
 @import "main";
 
-// this is just example of  how commenting css should be done in big projects
-@import "styledocco"; 
 
-div{ 
-	background: red;
-	@include iphone{
-		background: blue;
-	}
-}

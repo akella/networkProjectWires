@@ -7,6 +7,10 @@
 .project{
 	padding: 20px 37px 20px 62px;
 	@include box-sizing(border-box);
+	cursor: pointer;
+	&:hover{
+		background: rgba(#fff, .1);
+	}
 	&.project_active{
 		background: #545456;
 		position: relative;
@@ -17,6 +21,9 @@
 			top: 50%;
 			right: 0;
 			margin-top: -20px;
+		}
+		&:hover{
+			background: transparent;
 		}
 	}
 	&.project_owner{
@@ -30,9 +37,9 @@
 		margin-right: 20px;
 	}
 	.project__category{
-		font-size: 13px;
+		font-size: 15px;
 		color: #CCCBC8;
-		margin-bottom: 4px;
+		margin-bottom: 6px;
 		text-transform: uppercase;
 		line-height: 1;
 		padding-top: 6px;
@@ -121,7 +128,7 @@
 	}
 	.sproject__title{
 		@extend .project__title;
-		margin-bottom: 4px;
+		margin-bottom: 6px;
 	}
 	.sproject__status{
 		@extend .project__status;
@@ -158,5 +165,87 @@
 		}
 	}
 }
+.b{
+	margin-top: 33px;
+	font-size: 18px;
+	color: #FFFEF9;
+	a{
+		color: #FFFEF9;
+		text-decoration: none;
+	}
+	h2{
+		@include medium;
+		font-size: 25px;
+		font-weight: normal;
+		border-bottom: 1px solid #C3C4C4;
+		padding-bottom: 3px;
+		line-height: 1;
+		text-transform: uppercase;
+		margin-bottom: 8px;
+	}
+	&.b_notifications h2{
+		width: 350px;
+		position: relative;
+		span{
+			position: absolute;
+			right: 0;
+			bottom: 5px;
+			background: #A4A6A8;
+			width: 50px;
+			display: inline-block;
+			text-align: center;
+			color: #F9F8F4;
+			height: 25px;
+			line-height: 25px;
+			border-radius: 20px;
+			font-size: 12px;
+		}
+	}
+	&.b_notes{
+		float: left;
+		width: 60%;
+		h2{
+			width: 350px;
+		}
+	}
+	&.b_shares{
+		float: right;
+		width: 34%;
+	}
+}
+.notificationslist{
+	list-style: none;
+	margin-left: 6px;
+	li{
+		padding-left: 26px;
+		position: relative;
+		margin-bottom: 5px;
+		&:before{
+			content:' ';
+			position: absolute;
+			left: 0;
+			top: 4px;
+			@include s($icons, bul);
+		}
+	}
+}
+.shareslist{
+	margin-left: 45px;
+	list-style: none;
+	li{
+		margin-bottom: 5px;
+		position: relative;
+		font-size: 15px;
+		padding-left: 45px;
+		&:before{
+			position: absolute;
+			content: ' ';
+			@include s($icons, usericon);
+			left: 0;
+			top: 0;
+		}
+	}
+}
+
 
 

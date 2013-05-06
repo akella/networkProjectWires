@@ -26,6 +26,8 @@
 			@include s($icons, user);
 			vertical-align: middle;
 			margin-right: 19px;
+			position: relative;
+			top: -2px;
 		}
 	}
 	.topline__nav{

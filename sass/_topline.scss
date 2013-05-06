@@ -1,0 +1,85 @@
+@import "lib/base";
+.topline{
+	background: #231F20;
+	height: 82px;
+	padding: 0 43px 0 33px;
+	@extend %clr;
+	text-align: right;
+	.topline__head{
+		float: left;
+		text-transform: uppercase;
+		color: #DAD9D5;
+		font-size: 18px;
+		text-align: left;
+		height: 82px;
+		line-height: 82px;
+		a{
+			text-decoration: none;
+			color: #DAD9D5;
+		}
+		span{
+			font-size: 14px;
+			color: #6D6C6F;
+			margin-left: 10px;
+		}
+		i{
+			@include s($icons, user);
+			vertical-align: middle;
+			margin-right: 19px;
+		}
+	}
+	.topline__nav{
+		font-size: 18px;
+		color: #DAD9D5;
+		margin-left: 40px;
+		padding-top: 27px;
+		display: inline-block;
+		a{
+			text-decoration: none;
+			color: #DAD9D5;
+			text-transform: uppercase;
+		}
+	}
+	.mail{
+		display: inline-block;
+		width: 90px;
+		height: 37px;
+		position: relative;
+		vertical-align: middle;
+		top: -3px;
+		.mail__icon{
+			@include s($icons, mail);
+			position: absolute;
+			top: 0;
+			right: 10px;
+		}
+		.mail__num{
+			position: absolute;
+			font-size: 14px;
+			color: #BBBDBF;
+			left: 13px;
+			top: 11px;
+			@include bold();
+		}
+		&.mail__hasnew{
+			.mail__num{
+				color: #C21A30;
+			}
+			.mail__icon{
+				right: 19px;
+				top: 0;
+				left: 0;
+				@include s($icons, mail_a);
+			}
+		}
+	}
+}
+
+
+
+
+
+
+
+
+

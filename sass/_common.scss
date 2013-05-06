@@ -53,6 +53,8 @@ body{
 		size: 12px;
 	}
 	line-height:1.4;
+	background: #76797A;
+	min-width: 900px;
 }
 // resets
 a img,fieldset{
@@ -65,6 +67,7 @@ a{
 	}
 }
 // common styles, these could be attached to any block with "@extend %wyswyg;"
+
 %wyswyg{
 	p{
 		margin-bottom: 1em;

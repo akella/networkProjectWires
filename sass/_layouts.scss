@@ -2,15 +2,55 @@
 /* default layout */
 .l{
 	width: 100%;
-	display: inline-block;
+	top: 55px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	position: absolute;
+	overflow: hidden;
 	
-	.l-col1{
-		float:left;
-		width: 40%;
+	.l__scrollme{
+		position: absolute;
+		width: 100%;
+		top: 0;
+		bottom: 0;
+		@include transition(all .3s);
+		.is-thumbview &{
+			left: -80%;
+		}
+	}
+	.l-projects{
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 30%;
+		background: #939597;
+	}
+	.l-projectview{
+		position: absolute;
+		left: 30%;
+		width: 50%;
+		top: 0;
+		bottom: 0;
+		background: #76797A;
+		overflow: auto;
 	}
 
-	.l-col2{
-		float:right;
-		width: 60%;
+	.l-sidebar{
+		position: absolute;
+		width: 20%;
+		right: 0;
+		top: 0;
+		bottom: 0;
+		background: #353639;
+	}
+	.l-thumbnails{
+		position: absolute;
+		left: 100%;
+		top: 0;
+		bottom: 0;
+		width: 80%;
+		background: #2D2D30;
 	}
 }

@@ -1,0 +1,187 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.jscrollpane.js"></script>
+	<script>
+	jQuery(document).ready(function($) {
+
+		$('.project').click(function (e) {
+			$(this).siblings().removeClass('project_active');
+			$(this).addClass('project_active');
+		});
+		$('.topline').click(function (e) {
+			$('body').toggleClass('is-shownotif');
+		});
+		$('.l-sidebar').click(function (e) {
+			$('body').toggleClass('is-thumbview');
+		});
+		/*scroll*/
+		// if ($('.l-projectview').length>0) {
+		// 		pane = $('.l-projectview');
+		// 		pane.jScrollPane({
+		// 	  	autoReinitialise: true,
+		// 	  	hideFocus: true,
+		// 	  	animateTo: true
+		// 	});
+		// 	var api = pane.data('jsp');
+		// };
+
+		//window resize
+		windowh = $(window).height();
+			$('.l').height(windowh - 55);
+		$(window).resize(function(event) {
+			windowh = $(window).height();
+			$('.l').height(windowh - 55);
+			// api.reinitialise();
+			// api_nav.reinitialise();
+			// api_content.reinitialise();
+		});
+
+
+
+
+		
+	});
+
+	</script>
+</head>
+<body class="b-dashboard">
+<div class="notification">
+	something
+</div>
+<!-- BEGIN  topline-->
+<div class="topline">
+	<a href="#" class="topline__head">
+		<i class="topline__stack"></i><i class="topline__ci"></i>Files
+	</a>
+	<a href="#" class="mail has-new">
+		<div class="mail__num">11</div><div class="mail__icon"></div>
+	</a>
+	<div class="user">
+		<a href="#" class="user__name" href="#"><div class="user__icon"></div>JOHN SMITH</a><span>/</span><a href="#" class="user__logout">LOGOUT</a> <div class="user__help">?</div>
+	</div>
+	
+</div>
+<!-- END topline-->
+
+
+<!-- BEGIN  dashboard-->
+<div class="dashboard l"><div class="l__scrollme">
+	
+	<!-- begin projects -->
+	<div class="l-projects">
+			<!-- BEGIN  project-->
+			<div class="project project_active project_owner">
+				
+				<div class="project__head">
+					<div class="master master__owner">Owner</div>
+					<div class="project__icon"></div>
+					<div class="project__category">My project</div>
+					<div class="project__title">My project</div>
+				</div>
+				
+				<div class="progress progress_small progress_owner">
+					<div class="progress__fill" style="width:40%"></div>
+				</div>
+			</div>
+			<!-- END project-->
+			
+			<!-- BEGIN  project-->
+			<div class="project project_participant">
+				
+				<div class="project__head">
+					<div class="master master_participant">participant</div>
+					<div class="project__icon"></div>
+					<div class="project__category">My project</div>
+					<div class="project__title">My project</div>
+				</div>
+				<div class="progress progress_small">
+					<div class="progress__fill" style="width:40%"></div>
+				</div>
+			</div>
+			<!-- END project-->
+			<!-- BEGIN  project-->
+			<div class="project project_participant">
+				<div class="project__head">
+					<div class="master master_participant">participant</div>
+					<div class="project__icon"></div>
+					<div class="project__category">My project</div>
+					<div class="project__title">My project</div>
+				</div>
+				<div class="progress progress_small">
+					<div class="progress__fill" style="width:90%"></div>
+				</div>
+			</div>
+			<!-- END project-->
+			<a class="projects__new" href="#"><div class="projects__newicon"></div>CREATE NEW PROJECT</a>
+	</div>
+	<!-- END PROJECTS -->
+	<!-- BEGIN projectview -->
+	<div class="l-projectview">
+		<!-- BEGIN  sproject-->
+		<div class="sproject">
+			<div class="master">owner</div>
+			<div class="sproject__category">My project</div>
+			<div class="sproject__title">Dragons two</div>
+			
+			<div class="sproject__pic">
+				<img src="http://placedog.com/700/220" alt="">
+			</div>
+			<div class="progress progress_fill progress_owner"><div class="progress__fill" style="width:23%"></div></div>
+			<div class="sproject__percentage">23%</div>
+			<div class="sproject__status"><b>Status:</b> pre-production</div>
+			
+			<div class="b b_notifications">
+				<h2 class="h2">Notifications <span>4</span></h2>
+				<ul class="notificationslist">
+					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
+					<li>Eos atque ab at autem commodi delectus nam</li>
+					<li>necessitatibus non labore nisi.</li>
+					<li>consequatur?</li>
+				</ul>
+			</div>
+			<div class="b b_notes">
+				<h2 class="h2">Notes</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur recusandae magnam repellat beata accusamus. Doloribus in.</p>
+			</div>
+			<div class="b b_shares">
+				<h2 class="h2">Shares</h2>
+				<ul class="shareslist">
+					<li>User one</li>
+					<li>User two</li>
+					<li>User one</li>
+					<li>User fivth</li>
+				</ul>
+			</div>
+			
+		</div>
+		<!-- END sproject-->
+	</div>
+	<!-- END PROJECTVIEW -->
+	
+	<!-- BEGIN  l-sidebar-->
+	<div class="l-sidebar">
+		
+	</div>
+	<!-- END l-sidebar-->
+	
+	<!-- BEGIN  l-thumbnails-->
+	<div class="l-thumbnails">
+		
+	</div>
+	<!-- END l-thumbnails-->
+	
+</div></div>
+<!-- END dashboard-->
+
+
+
+</body>
+</html>

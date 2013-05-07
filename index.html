@@ -6,168 +6,128 @@
 	<title>Template</title>
 	<meta name="viewport" content="width=device-width"/>
 	<link rel="stylesheet" media="screen" href="css/screen.css" >
-	<!-- <script src="http://code.jquery.com/jquery-2.0.0.min.js"></script> -->
+	<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
+	<script>
+	jQuery(document).ready(function($) {
+		$('.signupsplash').click(function (e) {
+			$('body').addClass('is-loginshow');
+		});
+		$('.plan').click(function (e) {
+			$(this).siblings().removeClass('plan_selected');
+			$(this).addClass('plan_selected');
+		});
+	});
+	</script>
 </head>
 <body>
 
 <!-- BEGIN  topline-->
 <div class="topline">
-	<div class="topline__head">
-		<i></i>Bob's Workspace <span>(individual)</span>
-	</div>
-	<a href="#" class="mail">
-		<div class="mail__icon"></div>
-		<div class="mail__num">11</div>
+	<a href="#" class="topline__head">
+		<i class="topline__stack"></i><i class="topline__ci"></i>Files
 	</a>
-	<div class="topline__nav">
-		<a href="#">account</a> / <a href="#">logout</a>
-	</div>
+	<a href="#" class="mail has-new">
+		<div class="mail__num">11</div><div class="mail__icon"></div>
+	</a>
+	<ul class="topline__nav">
+		<li><a href="#">Features</a></li>
+		<li><a href="#">Pricing</a></li>
+		<li><a href="#">Blog</a></li>
+		<li><a href="#">Support</a></li>
+		<li class="topline__login"><span>/</span><a href="#">Login</a></li>
+	</ul>
 	
 </div>
 <!-- END topline-->
 
-<!-- BEGIN  l-->
-<div class="l">
-	<!-- BEGIN  l-col1-->
-	<div class="l-col1">
-		<div class="projects">
-			<!-- BEGIN  project-->
-			<div class="project project_active project_owner">
-				<div class="project__head">
-					<div class="project__icon"></div>
-					<div class="project__category">My project</div>
-					<div class="project__title">My project</div>
-				</div>
-				<div class="master master__owner">Owner</div>
-				<div class="project__status">pre-production</div>
-				<div class="progress progress_owner">
-					<div class="progress__fill" style="width:40%"></div>
-				</div>
-			</div>
-			<!-- END project-->
-			
-			<!-- BEGIN  project-->
-			<div class="project">
-				<div class="project__head">
-					<div class="project__icon"></div>
-					<div class="project__category">My project</div>
-					<div class="project__title">My project</div>
-				</div>
-				<div class="master master_participant">participant</div>
-				<div class="project__status">pre-production</div>
-				<div class="progress">
-					<div class="progress__fill" style="width:40%"></div>
-				</div>
-			</div>
-			<!-- END project-->
-			<!-- BEGIN  project-->
-			<div class="project">
-				<div class="project__head">
-					<div class="project__icon"></div>
-					<div class="project__category">My project</div>
-					<div class="project__title">My project</div>
-				</div>
-				<div class="master master_participant">participant</div>
-				<div class="project__status">pre-production</div>
-				<div class="progress">
-					<div class="progress__fill" style="width:90%"></div>
-				</div>
-			</div>
-			<!-- END project-->
-			<!-- BEGIN  project-->
-			<div class="project">
-				<div class="project__head">
-					<div class="project__icon"></div>
-					<div class="project__category">My project</div>
-					<div class="project__title">My project</div>
-				</div>
-				<div class="master master_participant">participant</div>
-				<div class="project__status">pre-production</div>
-				<div class="progress">
-					<div class="progress__fill" style="width:40%"></div>
-				</div>
-			</div>
-			<!-- END project-->
-			<!-- BEGIN  project-->
-			<div class="project">
-				<div class="project__head">
-					<div class="project__icon"></div>
-					<div class="project__category">My project</div>
-					<div class="project__title">My project</div>
-				</div>
-				<div class="master master_participant">participant</div>
-				<div class="project__status">pre-production</div>
-				<div class="progress">
-					<div class="progress__fill" style="width:40%"></div>
-				</div>
-			</div>
-			<!-- END project-->
-			<!-- BEGIN  project-->
-			<div class="project">
-				<div class="project__head">
-					<div class="project__icon"></div>
-					<div class="project__category">My project</div>
-					<div class="project__title">My project</div>
-				</div>
-				<div class="master master_participant">participant</div>
-				<div class="project__status">pre-production</div>
-				<div class="progress">
-					<div class="progress__fill" style="width:40%"></div>
-				</div>
-			</div>
-			<!-- END project-->
-			
-		</div>
-		<!-- end projects -->
-	</div>
-	<!-- END l-col1-->
-	
-	<!-- BEGIN  l-col2-->
-	<div class="l-col2">
-		
-		<!-- BEGIN  sproject-->
-		<div class="sproject">
-			<div class="master">owner</div>
-			<div class="sproject__category">My project</div>
-			<div class="sproject__title">Dragons two</div>
-			
-			<div class="sproject__pic">
-				<img src="http://placedog.com/700/220" alt="">
-			</div>
-			<div class="progress progress_fill progress_owner"><div class="progress__fill" style="width:23%"></div></div>
-			<div class="sproject__percentage">23%</div>
-			<div class="sproject__status"><b>Status:</b> pre-production</div>
-			
-			<div class="b b_notifications">
-				<h2 class="h2">Notifications <span>4</span></h2>
-				<ul class="notificationslist">
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-					<li>Eos atque ab at autem commodi delectus nam</li>
-					<li>necessitatibus non labore nisi.</li>
-					<li>consequatur?</li>
-				</ul>
-			</div>
-			<div class="b b_notes">
-				<h2 class="h2">Notes</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur recusandae magnam repellat beata accusamus. Doloribus in.</p>
-			</div>
-			<div class="b b_shares">
-				<h2 class="h2">Shares</h2>
-				<ul class="shareslist">
-					<li>User one</li>
-					<li>User two</li>
-					<li>User one</li>
-					<li>User fivth</li>
-				</ul>
-			</div>
-			
-		</div>
-		<!-- END sproject-->
-		
-	</div>
-	<!-- END l-col2-->
+<div class="signupsplash">
+	<h2 class="step"><span>2.</span>Sign up</h2>
 </div>
-<!-- END l-->
+
+<!-- BEGIN WRAP -->
+<div class="wrap">
+<!-- BEGIN  plans-->
+<div class="plans">
+	<h2 class="step"><span>1.</span>SELECT A PLAN</h2>
+	
+	<!-- BEGIN  plan-->
+	<div class="plan">
+		<div class="plan__shadow"></div>
+		<div class="plan__icon plan__iconindividual"></div>
+		<h3>INDIVIDUAL <span>FREE</span></h3>
+		<ul>
+			<li>SINGLE USER</li>
+			<li>1TB CLOUD STORAGE</li>
+			<li>NO SIZE LIMIT*</li>
+			<li>ORGANIZATION TOOLS</li>
+			<li>RATE & APPROVE APP</li>
+			<li>MOBILE ACCESS</li>
+		</ul>
+		<div class="plan__selected"><span>SELECTED</span></div>
+	</div>
+	<!-- END plan-->
+	<div class="plan__or">or</div>
+	<!-- BEGIN  plan-->
+	<div class="plan plan_selected">
+		<div class="plan__shadow"></div>
+		<div class="plan__icon plan__icongroup"></div>
+		<h3>BUSINESS <span>FREE 14 DAY TRIAL</span></h3>
+		<ul>
+			<li>UNLIMITED USERS</li>
+			<li>1TB CLOUD STORAGE</li>
+			<li>NO SIZE LIMIT*</li>
+			<li>ORGANIZATION TOOLS</li>
+			<li>RATE & APPROVE APP</li>
+			<li>MOBILE ACCESS</li>
+		</ul>
+		<div class="plan__selected"><span>SELECTED</span></div>
+	</div>
+	<!-- END plan-->
+	<div class="plans__separator"></div>
+</div>
+<!-- END plans-->
+
+<div class="singupcolumn">
+	<h2 class="step"><span>2.</span>Sign up</h2>
+	<div class="signup">
+		<div class="signup__shadow"></div>
+		<div class="signup__icon"></div>
+		<div class="row"><input type="text" name="" id="" placeholder="DANIEL"></div>
+		<div class="row"><input type="text" name="" id="" value="" placeholder="LAST NAME"></div>
+		<div class="row"><input type="text" name="" id="" value="" placeholder="EMAIL"></div>
+		<div class="signup__password">
+			<div class="signup__passwordstrength">
+				<span>PASSWORD STRENGTH</span>
+				<div class="signup__passwordstrengthprogress"><div style="width:25%"></div></div>
+			</div>
+			<div class="row"><input type="text" name="" id="" value="" placeholder="PASSWORD"></div>
+		</div>
+		
+		
+			
+		<div class="row"><input type="text" name="" id="" value="" placeholder="company"></div>
+		<div class="row row_select">
+			<input type="text" name="" id="" value="" placeholder="company size"><i></i>
+			<select name="" id=""><option value="1">1-10</option><option value="1">10-20</option></select>
+		</div>
+		<div class="row__radio">
+			<label for="rad"><input type="checkbox" name="rad" id="rad"><i></i>I AGREE TO <a href="#">TERMS OF USE</a></label>
+		</div>
+		
+		<div class="signup__submit">
+			CREATE A WORKSPACE
+			<input type="submit" value="gogo">
+		</div>
+		
+	</div>
+</div>
+
+</div>
+<!-- end WRAP -->
+<footer class="footer">
+	<div class="footer__copy">© 2013 SONY MEDIA CLOUD SERVICES. ALL RIGHTS RESERVED.</div>
+	<a class="footer__logo" href="#sony" >Sony</a>
+</footer>
 
 </body>
 </html>

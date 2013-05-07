@@ -1,81 +1,112 @@
 @import "lib/base";
 .topline{
 	background: #231F20;
-	height: 82px;
-	padding: 0 43px 0 33px;
+	height: 55px;
 	@extend %clr;
 	text-align: right;
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1000;
+	@include box-shadow(0 5px 10px rgba(#000,.4));
 	.topline__head{
-		float: left;
+		position: absolute;
+		left: 33px;
 		text-transform: uppercase;
 		color: #DAD9D5;
 		font-size: 18px;
 		text-align: left;
-		height: 82px;
-		line-height: 82px;
+		height: 55px;
+		line-height: 55px;
+		@include lite;
+		text-decoration: none;
+		padding-right: 20px;
 		a{
 			text-decoration: none;
 			color: #DAD9D5;
 		}
-		span{
-			font-size: 14px;
-			color: #6D6C6F;
-			margin-left: 10px;
-		}
-		i{
-			@include s($icons, user);
+		.topline__stack{
+			@include s($icons, stack);
 			vertical-align: middle;
-			margin-right: 19px;
+			margin-right: 17px;
 			position: relative;
 			top: -2px;
 		}
+		.topline__ci{
+			@include s($icons, ci);
+			vertical-align: middle;
+			position: relative;
+			top: -2px;
+			margin-right: 6px;
+		}
 	}
 	.topline__nav{
-		font-size: 18px;
-		color: #DAD9D5;
-		margin-left: 40px;
-		padding-top: 27px;
 		display: inline-block;
+		padding: 20px 30px 0 0;
+		font-size: 11px;
+		font-size: 0;
+		list-style: none;
+		@include lite;
+		li{
+			display: inline-block;
+			font-size: 11px;
+		}
 		a{
 			text-decoration: none;
 			color: #DAD9D5;
 			text-transform: uppercase;
+			display: inline-block;
+			padding: 0 10px;
+			&:hover{
+				text-decoration: underline;
+				color: #fff;
+			}
+		}
+		span{
+			color: #bbbdbf;
+			margin: 0 10px;
+		}
+		.topline__login{
+			a{
+				position: relative;
+				color: #fff;
+				padding-right: 20px;
+				&:before{
+					content:' ';
+					position: absolute;
+					right: 0px;
+					top: 0;
+					@include s($icons, login);
+				}
+			}
 		}
 	}
 	.mail{
+		text-decoration: none;
 		display: inline-block;
-		width: 90px;
-		height: 37px;
 		position: relative;
 		vertical-align: middle;
-		top: -3px;
+		@include bold;
+		color: #77BF9D;
+		font-size: 11px;
+		margin-right: 53px;
+		position: relative;
+		top: 2px;
 		.mail__icon{
 			@include s($icons, mail);
-			position: absolute;
-			top: 0;
-			right: 10px;
+			vertical-align: middle;
+			position: relative;
+			top: -2px;
 		}
 		.mail__num{
-			position: absolute;
-			font-size: 14px;
-			color: #BBBDBF;
-			left: 13px;
-			top: 11px;
-			@include bold();
-		}
-		&.mail__hasnew{
-			.mail__num{
-				color: #C21A30;
-			}
-			.mail__icon{
-				right: 19px;
-				top: 0;
-				left: 0;
-				@include s($icons, mail_a);
-			}
+			display: inline-block;
+			margin-right: 8px;
 		}
 	}
 }
+
+
 
 
 

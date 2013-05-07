@@ -51,42 +51,45 @@ body{
 	font-size: 12px;
 	font-weight: normal;
 	line-height:1.4;
-	background: #76797A;
+	background: #939597;
 	min-width: 900px;
+	min-height: 500px;
+	padding-top: 85px;
+	padding-bottom: 60px;
+	text-rendering: optimizeLegibility;
 }
 // resets
 a img,fieldset{
 	border:none;
-	}
-a{
-	color:#00919e;
-	&:hover{
-
-	}
 }
-// common styles, these could be attached to any block with "@extend %wyswyg;"
 
-%wyswyg{
-	p{
-		margin-bottom: 1em;
+
+//footer
+.footer{
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 47px;
+	background: #76797A;
+	.footer__copy{
+		text-align: center;
+		height: 47px;
+		line-height: 47px;
+		font-size: 10px;
+		text-transform: uppercase;
+		color: #AAACAC;
 	}
-	ul,ol{
-		margin: 1em 2em;
-		list-style: disc;
-	}
-	ol{
-		list-style: decimal;
-	}
-	blockquote{
-		margin: 1em 2em;
-	}
-	table{
-		border-spacing: 0;
-		border-collapse: collapse;
-		width: 100%;
-		td{
-			border: 1px solid #ccc;
-			padding: 5px;
+	.footer__logo{
+		position: absolute;
+		top: 19px;
+		right: 29px;
+		@include s($icons, sony);
+		@extend %hide-text;
+		opacity: .4;
+		@include transition(all .1s);
+		&:hover{
+			opacity: 1;
 		}
 	}
 }

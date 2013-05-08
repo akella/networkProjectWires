@@ -230,8 +230,8 @@ a img, fieldset { border: none; }
 .notificationslist li:before { content: ' '; position: absolute; left: 0; top: 2px; background: url('../img/icons-s34633d74ac.png') 0 -812px no-repeat; width: 7px; height: 11px; display: inline-block; }
 
 .shareslist { margin-left: 45px; list-style: none; }
-.shareslist li { margin-bottom: 5px; position: relative; font-size: 10px; padding-left: 45px; }
-.shareslist li:before { position: absolute; content: ' '; background: url('../img/icons-s34633d74ac.png') 0 -338px no-repeat; width: 34px; height: 19px; display: inline-block; left: 0; top: 0; }
+.shareslist li { margin-bottom: 6px; position: relative; font-size: 10px; padding-left: 45px; }
+.shareslist li:before { position: absolute; content: ' '; background: url('../img/icons-s34633d74ac.png') 0 -338px no-repeat; width: 34px; height: 19px; display: inline-block; left: 0; top: -2px; }
 
 .files { list-style: none; font-size: 0; padding: 10px 20px; }
 .files li { display: inline-block; font-size: 10px; margin-right: 1px; margin-bottom: 8px; background: #262629; text-align: center; width: 100px; height: 125px; padding-top: 5px; }

@@ -16,13 +16,22 @@
 		opacity: 0;
 		z-index: 1;
 	}
+	.signupsplash__inner{
+		width: 840px;
+		text-align: right;
+		margin: 0 auto;
+		.step{
+			float: right;
+			width: 220px;
+		}
+	}
 }
 .wrap{
 	width: 840px;
 	margin: 0 auto;
-	@include transition(all 300ms ceaser($easeInOutBack));
+	@include transition(all 400ms ceaser($easeInOutBack));
 	@include transition-delay(200ms);
-	@include translate(1000px, 0);
+	@include translate(2000px, 0);
 	.is-loginshow &{
 		@include translate(0, 0);
 	}

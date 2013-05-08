@@ -277,4 +277,130 @@
 }
 
 
+.files{
+	list-style: none;
+	font-size: 0;
+	padding: 10px 20px;
+	li{
+		display: inline-block;
+		font-size: 10px;
+		margin-right: 1px;
+		margin-bottom: 8px;
+		background: #262629;
+		text-align: center;
+		width: 100px;
+		height: 125px;
+		padding-top: 5px;
+	}
+	.files__icon{
+		@include s($icons, file);
+	}
+}
+.files__view{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 35px;
+	background: #262629;
+	@include box-sizing(border-box);
+	padding: 10px 20px 0 0;
+	text-align: right;
+	input{
+		width: 160px;
+	}
+}
+.uploadfiles{
+	cursor: pointer;
+	background: #45555D;
+	border-bottom-left-radius:10px;
+	border-bottom-right-radius:10px;
+	padding: 0 10px;
+	font-size: 10px;
+	color: #fff;
+	height: 30px;
+	line-height: 30px;
+	margin: 0 13px 8px 13px;
+	text-transform: uppercase;
+	position: relative;
+	.uploadfiles__icon{
+		@include s($icons, upload);
+		vertical-align: middle;
+		margin-right: 6px;
+	}
+	input{
+		-webkit-appearance:none;
+		opacity: 0;
+		position: absolute;
+		top: 0;
+		left: 0;
+		bottom: 0;
+		right: 0;
+		z-index: 1;
+	}
+}
+.search{
+	margin: 0 15px 16px 15px;
+	position: relative;
+	input{
+		background: #2D2D30;
+		padding: 5px 5px 5px 27px;
+		border-radius: 10px;
+		border-style: none;
+		color: #fff;
+		text-transform: uppercase;
+		@include placeholder-color(#6D6E71);
+		width: 100%;
+		@include box-sizing(border-box);
+		&:focus{
+			outline: none;
+		}
+	}
+	.search__icon{
+		@include s($icons, search);
+		position: absolute;
+		top: 6px;
+		left: 8px;
+	}
+}
+.list{
+	margin: 0 40px 35px 40px;
+	text-transform: uppercase;
+	dt{
+		font-size: 12px;
+		color: #fff;
+		border-bottom: 1px solid #595A5D;
+		padding-bottom: 6px;
+		margin-bottom: 10px;
+	}
+	ul{
+		list-style: none;
+		font-size: 10px;
+		li{
+			margin-bottom: 10px;
+		}
+		a{
+			text-decoration: none;
+			color: #fff;
+		}
+		span{
+			color: #77BF9D;
+			font-size: 8px;
+		}
+		.list__active{
+			position: relative;
+			&:before{
+				width: 30px;
+				height: 9px;
+				background: #77BF9D;
+				left: -40px;
+				top: 2px;
+				position: absolute;
+				content: ' ';
+			}
+		}
+	}
+}
+
+
 

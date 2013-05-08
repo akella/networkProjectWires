@@ -19,7 +19,7 @@
 		$('.topline').click(function (e) {
 			$('body').toggleClass('is-shownotif');
 		});
-		$('.l-sidebar').click(function (e) {
+		$('.list').click(function (e) {
 			$('body').toggleClass('is-thumbview');
 		});
 		/*scroll*/
@@ -168,13 +168,67 @@
 	
 	<!-- BEGIN  l-sidebar-->
 	<div class="l-sidebar">
+		<div class="uploadfiles">
+			<label><div class="uploadfiles__icon"></div>upload files</label>
+			<input type="file" name="" id="">
+		</div>
+		<div class="search">
+			<div class="search__icon"></div>
+			<input type="text" name="" placeholder="search" id="">
+		</div>
+		<dl class="list">
+			<dt>MY STUFF</dt>
+			<dd>
+				<ul>
+					<li><a href="#">RECENTLY UPLOADED</a></li>
+					<li class="list__active"><a href="#">FLAGGED <span>(10)</span> </a></li>
+					<li><a href="#">FOLDERS</a></li>
+				</ul>
+			</dd>
+		</dl>
 		
+		<dl class="list">
+			<dt>Shared</dt>
+			<dd>
+				<ul>
+					<li><a href="#">collections</a></li>
+					<li><a href="#">packages <span>(10)</span> </a></li>
+				</ul>
+			</dd>
+		</dl>
+		
+		<dl class="list">
+			<dt>Library</dt>
+			<dd>
+				<ul>
+					<li><a href="#">Recent</a></li>
+					<li><a href="#">collections</a></li>
+					<li><a href="#">packages <span>(10)</span> </a></li>
+				</ul>
+			</dd>
+		</dl>
 	</div>
 	<!-- END l-sidebar-->
 	
 	<!-- BEGIN  l-thumbnails-->
 	<div class="l-thumbnails">
-		
+		<ul class="files">
+			<li><a href="#" class="files__icon"></a></li>
+			<li><a href="#" class="files__icon"></a></li>
+			<li><a href="#" class="files__icon"></a></li>
+			<li><a href="#" class="files__icon"></a></li>
+			<li><a href="#" class="files__icon"></a></li>
+			<li><a href="#" class="files__icon"></a></li>
+			<li><a href="#" class="files__icon"></a></li>
+			<li><a href="#" class="files__icon"></a></li>
+			<li><a href="#" class="files__icon"></a></li>
+			<li><a href="#" class="files__icon"></a></li>
+			<li><a href="#" class="files__icon"></a></li>
+			<li><a href="#" class="files__icon"></a></li>
+		</ul>
+		<div class="files__view">
+			<input type="range" name="" id="">
+		</div>
 	</div>
 	<!-- END l-thumbnails-->
 	

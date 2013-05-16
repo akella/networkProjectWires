@@ -9,8 +9,8 @@
 	<script src="http://code.jquery.com/jquery-2.0.0.min.js"></script>
 	<script>
 	jQuery(document).ready(function($) {
-		$('.signupsplash').click(function (e) {
-			$('body').addClass('is-loginshow');
+		$('.signupsplash__signup a').click(function (e) {
+			$('body').removeClass('is-first').addClass('is-loginshow');
 		});
 		$('.plan').click(function (e) {
 			$(this).siblings().removeClass('plan_selected');
@@ -19,7 +19,8 @@
 	});
 	</script>
 </head>
-<body>
+<body class="is-first">
+<div class="wrapsite">
 
 <!-- BEGIN  topline-->
 <div class="topline">
@@ -38,7 +39,21 @@
 <!-- END topline-->
 
 <div class="signupsplash"><div class="signupsplash__inner">
-	<h2 class="step"><span>2.</span>Sign up</h2>
+	<div class="signupsplash__form">
+		<h2>WE HANDLE BIG SHIT. <span>SO YOU DON’T HAVE TOO</span></h2>
+		<div class="signupsplash__signup">
+			<span>SIGN UP</span>
+			<a href="#">CREATE A WORKSPACE</a>
+		</div>
+		<div class="login">
+			<h3>LOGIN</h3>
+			<div class="row"><input type="text" name="" id="" value="" placeholder="Username"></div>
+			<div class="row"><input type="text" name="" id="" value="" placeholder="Password"></div>
+			<div class="row__radio">
+				<label for="rad1"><input type="checkbox" name="rad1" id="rad1"><i></i>REMEMBER MY LOGIN</label>
+			</div>
+		</div>
+	</div>
 </div></div>
 
 <!-- BEGIN WRAP -->
@@ -125,5 +140,7 @@
 	<a class="footer__logo" href="#sony" >Sony</a>
 </footer>
 
+</div>
+<!-- end wrapsite -->
 </body>
 </html>

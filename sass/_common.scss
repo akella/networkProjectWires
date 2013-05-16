@@ -36,11 +36,13 @@
 // 	    #{$s}
 //     }
 // BTW these comments will not render into css
-// for awesomeness use .🍺 class. Example:
-// .🍺{beer:everything}
+// for awesomeness use . class. Example:
+// .{beer:everything}
 
 //*{-webkit-transition: .3s all;}
-
+html,body{
+   height: 100%;
+}
 *{margin:0;padding:0; }
 @include iphone{*{-webkit-text-size-adjust: none;}}
 button::-moz-focus-inner { padding: 0; border: 0 }
@@ -58,9 +60,13 @@ body{
 	padding-bottom: 60px;
 	text-rendering: optimizeLegibility;
 	position: relative;
+	@include box-sizing(border-box);
 	&.b-dashboard{
 		padding-bottom: 0;
 	}
+}
+.wrapsite{
+	overflow: hidden;
 }
 
 // resets
@@ -75,8 +81,12 @@ a img,fieldset{
 	bottom: 0;
 	left: 0;
 	right: 0;
+	z-index: 10000;
 	height: 47px;
 	background: #76797A;
+	.is-first &{
+		background: transparent;
+	}
 	.footer__copy{
 		text-align: center;
 		height: 47px;
@@ -125,19 +135,19 @@ a img,fieldset{
    -webkit-transform: translateZ(0);
    transform: translateZ(0);
    .jspScrollable:hover &{
-      opacity: 1;
+	  opacity: 1;
    }
    .nav &{
-      right: auto;
-      left: 2px;
-      width: 8px;
-      z-index:100;
+	  right: auto;
+	  left: 2px;
+	  width: 8px;
+	  z-index:100;
    }
    .topic &{
-      right: 8px;
+	  right: 8px;
    }
    .content &{
-      right: 5px;
+	  right: 5px;
    }
 }
 

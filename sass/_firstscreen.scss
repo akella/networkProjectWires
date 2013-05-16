@@ -123,8 +123,8 @@
 	width: 213px;
 }
 .plan{
-	width: 213px;
-	height: 450px;
+	width: 214px;
+	height: 409px;
 	position: relative;
 	@include background-image(linear-gradient(#231F20, #353639));
 	@include box-sizing(border-box);
@@ -133,7 +133,6 @@
 	cursor: pointer;
 	text-align: center;
 	padding-top: 18px;
-	border-top: 3px solid #231F20;
 	.plan__shadow{
 		@include s($icons, shadow);
 		position: absolute;
@@ -142,18 +141,18 @@
 		display: none;
 	}
 	.plan__selected{
-		height: 44px;
-		line-height: 44px;
+		line-height: 41px;
+		height: 41px;
 		position: absolute;
-		bottom: 0;
-		left: 0;
+		bottom: -41px;
+		left: -4px;
 		right: 0;
-		background: #45555D;
+		
 		color: #FFF;
 		@include box-sizing(border-box);
 		span{
-			@include s($icons, radial);
-			width: 100%;
+			@include s($icons, selected);
+
 			text-transform: uppercase;
 			color: #fff;
 			font-size: 13px;
@@ -168,16 +167,28 @@
 			display: none;
 		}
 	}
+	.plan__border{
+		display: none;
+	}
 	&.plan_selected{
-		border-top: 3px solid #77BF9D;
+
 		.plan__shadow{
 			display: block;
 		}
 		.plan__selected{
-			border-top: 3px solid #77BF9D;
 			span{
 				display: block;
 			}
+		}
+		.plan__border{
+			border: 4px solid #76BC9D;
+			position: absolute;
+			height: 405px;
+			width: 214px;
+			left: -4px;
+			top: -4px;
+			z-index: -1;
+			display: block;
 		}
 	}
 	ul{
@@ -282,7 +293,7 @@
 		background: #A6A8AB;
 		text-align: center;
 		text-transform: uppercase;
-		font-size: 11px;
+		font-size: 10px;
 		display: block;
 		padding: 5px 0;
 		width: 100%;

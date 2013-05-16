@@ -401,6 +401,29 @@
 		}
 	}
 }
-
+.dragndrop{
+	width: 420px - 40px;
+	margin: 40px auto 40px auto;
+	border-radius: 15px;
+	background: #575759;
+	padding: 20px 20px 25px 20px;
+	text-align: center;
+	.dragndrop__icon{
+		@include s($icons, file);
+		margin-bottom: 20px;
+	}
+	.dragndrop__head{
+		font-size: 17px;
+		text-transform: uppercase;
+		font-weight: normal;
+		color: #c9c9c9;
+		span{
+			display: block;
+			font-size: 10px;
+			color: #969696;
+			margin-top: 10px;
+		}
+	}
+}
 
 

@@ -76,6 +76,7 @@
 .wrap{
 	width: 840px;
 	margin: 0 auto;
+	@extend %clr;
 	@include transition(all 400ms ceaser($easeInOutBack));
 	@include transition-delay(200ms);
 	@include translate(2000px, 0);

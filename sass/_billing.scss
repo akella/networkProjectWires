@@ -1,0 +1,22 @@
+.note{
+	font-size: 10px;
+	color: #767676;
+	text-transform: uppercase;
+}
+
+
+.choosespace{
+	@extend %blackbox;
+	height: 240px;
+}
+
+.ownerinfo{
+	@extend %blackbox;
+	height: 210px;
+}
+
+.checkout{
+	@extend %blackbox;
+	height: 503px;
+
+}

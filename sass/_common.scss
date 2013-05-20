@@ -41,7 +41,7 @@
 
 //*{-webkit-transition: .3s all;}
 html,body{
-   height: 100%;
+	height: 100%;
 }
 *{margin:0;padding:0; }
 @include iphone{*{-webkit-text-size-adjust: none;}}
@@ -72,6 +72,24 @@ body{
 // resets
 a img,fieldset{
 	border:none;
+}
+.h2{
+	font-size: 17px;
+	@include lite;
+	font-weight: normal;
+	color: #fff;
+	text-transform: uppercase;
+	margin-bottom: 5px;
+	&.h2_center{
+		text-align: center;
+	}
+}
+%blackbox{
+	background: #313133;
+	border-radius: 15px;
+	color: #fff;
+	padding: 23px 0 10px 0;
+	text-align: center;
 }
 
 
@@ -114,122 +132,122 @@ a img,fieldset{
 /*scroll*/
 .jspContainer
 {
-   overflow: hidden;
-   position: relative;
+	overflow: hidden;
+	position: relative;
 
 }
 .jspPane
 {
-   position: absolute;
-   width: 100% !important;
+	position: absolute;
+	width: 100% !important;
 }
 .jspVerticalBar
 {
-   position: absolute;
-   top: 0;
-   right: 12px;
-   width: 8px;
-   height: 100%;  
-   opacity: .1;
-   @include transition(opacity,.2s,linear);
-   -webkit-transform: translateZ(0);
-   transform: translateZ(0);
-   .jspScrollable:hover &{
+	position: absolute;
+	top: 0;
+	right: 12px;
+	width: 8px;
+	height: 100%;  
+	opacity: .1;
+	@include transition(opacity,.2s,linear);
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	.jspScrollable:hover &{
 	  opacity: 1;
-   }
-   .nav &{
+	}
+	.nav &{
 	  right: auto;
 	  left: 2px;
 	  width: 8px;
 	  z-index:100;
-   }
-   .topic &{
+	}
+	.topic &{
 	  right: 8px;
-   }
-   .content &{
+	}
+	.content &{
 	  right: 5px;
-   }
+	}
 }
 
 .jspHorizontalBar
 {
-   position: absolute;
-   bottom: 0;
-   left: 0;
-   width: 100%;
-   height: 16px;
-   background: red;
-   display: none;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 16px;
+	background: red;
+	display: none;
 }
 .jspVerticalBar *,
 .jspHorizontalBar *
 {
-   margin: 0;
-   padding: 0;
+	margin: 0;
+	padding: 0;
 }
 .jspCap
 {
-   display: none;
+	display: none;
 }
 .jspHorizontalBar .jspCap
 {
-   float: left;
+	float: left;
 }
 .jspTrack
 {
-   width: 4px;
-   @include border-radius(2px);
-   position: relative;
+	width: 4px;
+	@include border-radius(2px);
+	position: relative;
 }
 .jspDrag
 {
-   background: rgba(black,.2);
-   position: relative;
-   top: 0;
-   left: 2px;
-   width: 8px;
-   @include border-radius(4px);
-   cursor: pointer;
+	background: rgba(black,.2);
+	position: relative;
+	top: 0;
+	left: 2px;
+	width: 8px;
+	@include border-radius(4px);
+	cursor: pointer;
 }
 .jspHorizontalBar .jspTrack,
 .jspHorizontalBar .jspDrag
 {
-   float: left;
-   height: 100%;
+	float: left;
+	height: 100%;
 }
 .jspArrow
 {
-   background: #50506d;
-   text-indent: -20000px;
-   display: block;
-   cursor: pointer;
+	background: #50506d;
+	text-indent: -20000px;
+	display: block;
+	cursor: pointer;
 }
 .jspArrow.jspDisabled
 {
-   cursor: default;
-   background: #80808d;
+	cursor: default;
+	background: #80808d;
 }
 .jspVerticalBar .jspArrow
 {
-   height: 16px;
+	height: 16px;
 }
 .jspHorizontalBar .jspArrow
 {
-   width: 16px;
-   float: left;
-   height: 100%;
+	width: 16px;
+	float: left;
+	height: 100%;
 }
 .jspVerticalBar .jspArrow:focus
 {
-   outline: none;
+	outline: none;
 }
 .jspCorner
 {
-   background: #eeeef4;
-   float: left;
-   height: 100%;
+	background: #eeeef4;
+	float: left;
+	height: 100%;
 }
 * html .jspCorner
 {
-   margin: 0 -3px 0 0;
+	margin: 0 -3px 0 0;
 }

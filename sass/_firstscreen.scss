@@ -79,8 +79,18 @@
 	@include transition(all 400ms ceaser($easeInOutBack));
 	@include transition-delay(200ms);
 	@include translate(2000px, 0);
-	.is-loginshow &{
+	.is-loginshow &,&.wrap_here{
 		@include translate(0, 0);
+	}
+	&.wrap_narrow{
+		width: 700px;
+	}
+	&.wrap_wide{
+		width: auto;
+		margin: 0 73px;
+		&>.h2{
+			margin-bottom: 17px;
+		}
 	}
 }
 .step{
@@ -224,6 +234,13 @@
 	.plan__icongroup{
 		@include s($icons, group);
 	}
+	.plan___separator{
+		border-bottom: 1px solid #58595B;
+		margin-bottom: 10px;
+		margin-top: -20px;
+		margin-right: 20px;
+		margin-left: 20px;
+	}
 }
 .plan__or{
 	display: inline-block;
@@ -289,6 +306,10 @@
 .row{
 	margin-bottom: 9px;
 	position: relative;
+	&.row_narrow{
+		width: 180px;
+		margin: 0 auto 9px auto;
+	}
 	input{
 		background: #A6A8AB;
 		text-align: center;

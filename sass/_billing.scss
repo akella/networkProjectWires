@@ -380,7 +380,7 @@
 		@include s($icons, shadow);
 		position: absolute;
 		top: 0;
-		left: 66px;
+		left: 253px;
 	}
 	.tools__content{
 		position: relative;
@@ -473,5 +473,180 @@
 			width: 100%;
 			text-decoration: none;
 			color: #fff;
+		}
+	}
+
+
+
+.logo__external{
+	a{
+		display: inline-block;
+		@include sized-sprite($icons, ci_large);
+		@extend %hide-text;
+		margin-bottom: 8px;
+	}
+}
+
+.l-external{
+	@extend %Clr;
+	width: 100%;
+	display: inline-block;
+	.l-external-col1{
+		float:left;
+		width: 180px;
+		margin-left: 15px;
+	}
+
+	.l-external-col2{
+		float:right;
+		width: 180px;
+		margin-right: 15px;
+	}
+}
+.wrap_external{
+	width: 415px;
+}
+
+.contact{
+	position: relative;
+	@extend %blackbox;
+	border-radius: 0;
+	height: 139px;
+	margin-bottom: 32px;
+}
+	.contact__shadow{
+		@include s($icons, shadow);
+		position: absolute;
+		top: 0;
+		left: 106px;
+	}
+	.contact__icon{
+		@include sized-sprite($icons, contact);
+		display: inline-block;
+		margin-top: -3px;
+		margin-bottom: 23px;
+	}
+
+
+.billing{
+	position: relative;
+	@extend %blackbox;
+	border-radius: 0;
+	height: 317px;
+	margin-bottom: 12px; //tmp
+	.note{
+		margin-bottom: 5px;
+	}
+}
+	.billing__shadow{
+		@include s($icons, shadow);
+		position: absolute;
+		top: 0;
+		left: 106px;
+	}
+	.billing__icon{
+		@include sized-sprite($icons, checkout);
+		display: inline-block;
+		margin-top: -3px;
+		margin-bottom: 28px;
+	}
+	.billing__space{
+		border-bottom: 1px solid #58595b;
+		width: 174px;
+		margin: 0 auto 12px;
+		padding-bottom: 12px;
+	}
+	.billing__pay{
+		small{
+			text-transform: uppercase;
+			display: block;
+			font-size: 11px;
+		}
+		strong{
+			font-size: 23px;
+			font-weight: normal;
+			span{
+				display: inline-block;
+				font-size: 10px;
+				vertical-align: top;
+				padding-top: 4px;
+				margin-right: 2px;
+			}
+		}
+	}
+	.billing__note{
+		font-size: 7px;
+		color: #767676;
+		text-transform: uppercase;
+	}
+	.billing__slash{
+		color: #767676;
+		font-size: 9px;
+		margin: 0 3px;
+	}
+	.billing__secure{
+		text-transform: uppercase;
+		position: absolute;
+		right: 0px;
+		top: -21px;
+		font-size: 7px;
+		color: #ffffff;
+		i{
+			@include sized-sprite($icons, secure);
+			display: inline-block;
+			margin-left: 8px;
+			vertical-align: top;
+			margin-top: -3px;
+		}
+	}
+
+	.select {
+		display: inline-block;
+		position: relative;
+		width: 80px;
+		select{
+			position: absolute;
+			opacity: 0;
+			height: 23px;
+			-webkit-appearance: none;
+			width: 100%;
+			z-index: 3;
+			top: 0;
+			left: 0;
+			text-transform: uppercase;
+			cursor: pointer;
+		}
+		i {
+			position: absolute;
+			right: 12px;
+			top: 9px;
+			display: inline-block;
+			z-index: 3;
+			@include sized-sprite($icons, select);
+		}
+	}
+	.select__value{
+		width: 100%;
+		color: #808080;
+		text-transform: uppercase;
+	}
+
+	.external__purchasebutton{
+		@include sized-sprite($icons, signup);
+		display: inline-block;
+		float: right;
+		height: 45px;
+		line-height: 45px;
+		text-transform: uppercase;
+		color: #fff;
+		font-size: 12px;
+		text-align: left;
+		margin-right: -13px;
+		margin-bottom: 100px; //tmp
+		a{
+			display: block;
+			text-decoration: none;
+			color: #fff;
+			padding-left: 68px;
 		}
 	}

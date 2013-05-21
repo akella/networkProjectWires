@@ -497,7 +497,7 @@ a img, fieldset { border: none; }
 
 .contact__shadow { background: url('../img/icons-s01651151a7.png') 0 0 no-repeat; width: 196px; height: 93px; display: inline-block; position: absolute; top: 0; left: 106px; }
 
-.contact__icon { background: url('../img/icons-s01651151a7.png') 0 -158px no-repeat; width: 48px; height: 49px; display: inline-block; margin-top: -3px; margin-bottom: 23px; }
+.contact__icon { background: url('../img/icons-s01651151a7.png') 0 -878px no-repeat; width: 49px; height: 48px; display: inline-block; margin-top: -3px; margin-bottom: 23px; }
 
 .billing { position: relative; border-radius: 0; height: 317px; margin-bottom: 12px; }
 .billing .note { margin-bottom: 5px; }

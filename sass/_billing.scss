@@ -84,7 +84,7 @@
 		left: 66px;
 	}
 	.ownerinfo__icon{
-		@include sized-sprite($icons, ownerinfo);
+		@include sized-sprite($icons, individual);
 		display: inline-block;
 		margin-top: 1px;
 		margin-bottom: 12px;

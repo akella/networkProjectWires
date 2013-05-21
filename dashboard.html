@@ -53,9 +53,20 @@
 </div>
 <!-- BEGIN  topline-->
 <div class="topline">
-	<a href="#" class="topline__head">
-		<i class="topline__stack"></i><i class="topline__ci"></i>Files
-	</a>
+	<div class="topline__head">
+		<div class="globalproject"><i class="topline__ci"></i> <div class="globalproject__name">My super project </div><div class="globalproject__arrow"></div>
+		
+		<div class="globalproject__drop">
+			<h3>WORKSPACE</h3>
+			<ul>
+				<li><a href="#"><i class="icon-generic"></i>Another prkject</a></li>
+				<li><a href="#"><i class="icon-collaboration"></i>Whatever</a></li>
+			</ul>
+			<div class="globalproject__create"><i></i>Create new project</div>
+		</div>
+		
+		</div>
+	</div>
 	<a href="#" class="mail has-new">
 		<div class="mail__num">11</div><div class="mail__icon"></div>
 	</a>
@@ -78,139 +89,74 @@
 
 <!-- BEGIN  dashboard-->
 <div class="dashboard l"><div class="l__scrollme">
-	
-	<!-- begin projects -->
-	<div class="l-projects">
-			<!-- BEGIN  project-->
-			<div class="project project_active project_owner">
-				
-				<div class="project__head">
-					<div class="master master__owner">Owner</div>
-					<div class="project__icon"></div>
-					<div class="project__category">My project</div>
-					<div class="project__title">My project</div>
-				</div>
-				
-				<div class="progress progress_small progress_owner">
-					<div class="progress__fill" style="width:40%"></div>
-				</div>
-			</div>
-			<!-- END project-->
-			
-			<!-- BEGIN  project-->
-			<div class="project project_participant">
-				
-				<div class="project__head">
-					<div class="master master_participant">participant</div>
-					<div class="project__icon"></div>
-					<div class="project__category">My project</div>
-					<div class="project__title">My project</div>
-				</div>
-				<div class="progress progress_small">
-					<div class="progress__fill" style="width:40%"></div>
-				</div>
-			</div>
-			<!-- END project-->
-			<!-- BEGIN  project-->
-			<div class="project project_participant">
-				<div class="project__head">
-					<div class="master master_participant">participant</div>
-					<div class="project__icon"></div>
-					<div class="project__category">My project</div>
-					<div class="project__title">My project</div>
-				</div>
-				<div class="progress progress_small">
-					<div class="progress__fill" style="width:90%"></div>
-				</div>
-			</div>
-			<!-- END project-->
-			<a class="projects__new" href="#"><div class="projects__newicon"></div>CREATE NEW PROJECT</a>
-	</div>
-	<!-- END PROJECTS -->
-	<!-- BEGIN projectview -->
-	<div class="l-projectview">
-		<!-- BEGIN  sproject-->
-		<div class="sproject">
-			<div class="master">owner</div>
-			<div class="sproject__category">My project</div>
-			<div class="sproject__title">Dragons two</div>
-			
-			<div class="sproject__pic">
-				<img src="http://placedog.com/700/220" alt="">
-			</div>
-			<div class="progress progress_fill progress_owner"><div class="progress__fill" style="width:23%"></div></div>
-			<div class="sproject__percentage">23%</div>
-			<div class="sproject__status"><b>Status:</b> pre-production</div>
-			
-			<div class="b b_notifications">
-				<h2 class="h2">Notifications <span>4</span></h2>
-				<ul class="notificationslist">
-					<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</li>
-					<li>Eos atque ab at autem commodi delectus nam</li>
-					<li>necessitatibus non labore nisi.</li>
-					<li>consequatur?</li>
-				</ul>
-			</div>
-			<div class="b b_notes">
-				<h2 class="h2">Notes</h2>
-				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur recusandae magnam repellat beata accusamus. Doloribus in.</p>
-			</div>
-			<div class="b b_shares">
-				<h2 class="h2">Shares</h2>
-				<ul class="shareslist">
-					<li>User one</li>
-					<li>User two</li>
-					<li>User one</li>
-					<li>User fivth</li>
-				</ul>
-			</div>
-			
-		</div>
-		<!-- END sproject-->
-	</div>
-	<!-- END PROJECTVIEW -->
-	
 	<!-- BEGIN  l-sidebar-->
 	<div class="l-sidebar">
-		<div class="uploadfiles">
-			<label><div class="uploadfiles__icon"></div>upload files</label>
-			<input type="file" name="" id="">
-		</div>
 		<div class="search">
 			<div class="search__icon"></div>
 			<input type="text" name="" placeholder="search" id="">
 		</div>
-		<dl class="list">
-			<dt>MY STUFF</dt>
-			<dd>
-				<ul>
-					<li><a href="#">RECENTLY UPLOADED</a></li>
-					<li class="list__active"><a href="#">FLAGGED <span>(10)</span> </a></li>
-					<li><a href="#">FOLDERS</a></li>
-				</ul>
-			</dd>
-		</dl>
 		
-		<dl class="list">
-			<dt>Shared</dt>
-			<dd>
-				<ul>
-					<li><a href="#">collections</a></li>
-					<li><a href="#">packages <span>(10)</span> </a></li>
-				</ul>
-			</dd>
-		</dl>
+		<!-- BEGIN  list-->
+		<div class="list list_devices list_hilite">
+			<h3>CONNECTED DEVICES <div class="list__toggle"></div></h3>
+			
+			<ul>
+				<li><i class="icon icon_wireless"></i><a href="#">SONY F55 - CAMERA A <span>(20)</span></a></li>
+				<li><i class="icon icon_wireless"></i><a href="#">SONY F55 - CAMERA A <span>(20)</span></a></li>
+				<li><i class="icon icon_wired"></i><a href="#">ODA - ARCHIVE X</a></li>
+			</ul>
+		</div>
+		<!-- END list-->
 		
-		<dl class="list">
-			<dt>Library</dt>
-			<dd>
-				<ul>
-					<li><a href="#">Recent</a></li>
-					<li><a href="#">collections</a></li>
-					<li><a href="#">packages <span>(10)</span> </a></li>
-				</ul>
-			</dd>
-		</dl>
+		
+		<!-- begin list -->
+		<div class="list list_mystuff">
+			<h3>MY STUFF <div class="list__toggle"></div></h3>
+			<ul>
+				<li><a href="#">RECENT UPLOADS <span>(20)</span></a></li>
+				<li><a href="#">STARRED</a></li>
+				<li class="parent"><div class="parent__icon"></div><a href="#">FOLDERS</a>
+					<ul>
+						<li><a href="#">PRE-VISUALIZATION A</a></li>
+						<li><a href="#">PRE-VISUALIZATION B</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end list -->
+		
+		<!-- begin list -->
+		<div class="list list_collaboration">
+			<h3>COLLABORATION <div class="list__toggle"></div></h3>
+			
+			<ul>
+				<li><a href="#">RECENTLY SHARED <span>(20)</span></a></li>
+				<li class="parent is-inactive"><div class="parent__icon"></div><a href="#">ALL SHARED</a>
+					<ul>
+						<li><a href="#">PRE-VISUALIZATION A <span>20</span></a></li>
+						<li><a href="#">PRE-VISUALIZATION B</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end list -->
+		
+		<!-- begin list -->
+		<div class="list list_library">
+			<h3>COMPANY LIBRARY <div class="list__toggle"></div></h3>
+			
+			<ul>
+				<li class="parent"><div class="parent__icon"></div><a href="#">COLLECTIONS</a>
+					<ul>
+						<li><a href="#">PRE-VISUALIZATION A <span>20</span></a></li>
+						<li><a href="#">PRE-VISUALIZATION B</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end list -->
+		
+		
 	</div>
 	<!-- END l-sidebar-->
 	

@@ -340,7 +340,7 @@
 	}
 }
 .search{
-	margin: 0 15px 16px 15px;
+	margin: 14px 15px 16px 15px;
 	position: relative;
 	input{
 		background: #2D2D30;
@@ -364,43 +364,285 @@
 	}
 }
 .list{
-	margin: 0 40px 35px 40px;
-	text-transform: uppercase;
-	dt{
+	position: relative;
+	padding: 12px 12px 16px 53px;
+	margin-right: 15px;
+	margin-bottom: 17px;
+	&:before{
+		content: ' ';
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		width: 6px;
+		background: #77BF9D;
+		border-top-right-radius:10px;
+		border-bottom-right-radius:10px;
+	}
+	&.list_hilite{
+		background: #000;
+		border-top: 2px solid #599077;
+		border-right: 2px solid #599077;
+		border-bottom: 2px solid #599077;
+		border-top-right-radius:15px;
+		border-bottom-right-radius:15px;
+	}
+	&.list_devices{
+		li{
+			position: relative;
+			padding-left: 20px;
+			.icon{
+				position: absolute;
+				left: 0;
+			}
+			.icon_wireless{
+				@include s($icons, wireless);
+			}
+			.icon_wired{
+				@include s($icons, wired);
+				margin-top: 4px;
+			}
+		}
+	}
+	&.list_mystuff{
+		border-color: #00A4C2;
+		&:before{background-color: #00A4C2;}
+		ul li span{color: #00A4C2;}
+	}
+	&.list_collaboration{
+		border-color: #FE9F37;
+		&:before{background-color: #FE9F37;}
+		ul li span{color: #FE9F37;}
+	}
+	&.list_library{
+		border-color: #F76334;
+		&:before{background-color: #F76334;}
+		ul li span{color: #F76334;}
+	}
+	h3{
+		font-weight: normal;
 		font-size: 12px;
 		color: #fff;
-		border-bottom: 1px solid #595A5D;
+		border-bottom: 1px solid #6F6F6F;
 		padding-bottom: 6px;
 		margin-bottom: 10px;
+		position: relative;
+		margin-bottom: 10px;
+		&:before{
+			content: ' ';
+			position: absolute;
+			display: inline-block;
+			left: -25px;
+			top: 0px;
+			@include s($icons, devices);
+			padding-bottom: 2px;
+			padding-right: 1px;
+		}
+	}
+	&.list_mystuff  h3:before{@include s($icons, mystuff);}
+	&.list_collaboration h3:before{@include s($icons, collaboration);}
+	&.list_library h3:before{@include s($icons, library);}
+	.list__toggle{
+		position: absolute;
+		right: 0;
+		bottom: 12px;
+		@include s($icons, arrdown);
+		cursor: pointer;
 	}
 	ul{
 		list-style: none;
-		font-size: 10px;
 		li{
-			margin-bottom: 10px;
+			margin-bottom: 8px;
+			position: relative;
 		}
 		a{
+			font-size: 10px;
 			text-decoration: none;
 			color: #fff;
+			position: relative;
+			display: block;
 		}
 		span{
+			position: absolute;
+			right: 19px;
+			font-size: 9px;
 			color: #77BF9D;
-			font-size: 8px;
 		}
-		.list__active{
+		.parent{
 			position: relative;
-			&:before{
-				width: 30px;
-				height: 9px;
-				background: #77BF9D;
-				left: -40px;
-				top: 2px;
+			.parent__icon{
 				position: absolute;
-				content: ' ';
+				left: -17px;
+				top: 3px;
+				@include s($icons, arrdown);
+				cursor: pointer;
+			}
+			&.is-inactive{
+				.parent__icon{
+					@include s($icons, arrright);
+					top: 4px;
+					left: -15px;
+				}
+				ul{
+					display: none;
+				}
+			}
+			ul{
+				padding-top: 10px;
+				li{
+					padding-left: 20px;
+					position: relative;
+					&:before{
+						content: ' ';
+						position: absolute;
+						left: 0;
+						@include s($icons, folder);
+						top: 2px;
+					}
+				}
+			}
+		}
+	}
+	&.list_collaboration{
+		ul .parent li{
+			&:before{
+				@include s($icons, collaborationbul);
 			}
 		}
 	}
 }
+.globalproject{
+	position: relative;
+	width: 220px;
+	.globalproject__arrow{
+		position: absolute;
+		right: 0;
+		top: 26px;
+		@include s($icons, arrdown);
+		cursor: pointer;
+	}
+	.globalproject__name{
+		font-size: 12px;
+		text-transform: uppercase;
+		color: #fff;
+		display: inline-block;
+		position: relative;
+		top: -1px;
+	}
+	.globalproject__drop{
+		position: absolute;
+		top: 45px;
+		left: 20px;
+		background: #242426;
+		border: 2px solid #fff;
+		width: 235px - 8px;
+		padding: 4px;
+		line-height: 1;
+		height: auto;
+		&:before{
+			position: absolute;
+			content: ' ';
+			top: -10px;
+			left: 20px;
+			@include s($icons, arrtop);
+		}
+		h3{
+			font-size: 12px;
+			text-align: center;
+			padding: 11px 0;
+			border-bottom: 2px solid #666666;
+			margin-bottom: 17px;
+		}
+		ul{
+			list-style: none;
+			margin-bottom: 30px;
+			li{
+				
+				text-transform: uppercase;
+				font-size: 10px;
+				color: #A2A3A5;
+				margin-bottom: 14px;
+				a{
+					text-decoration: none;
+					position: relative;
+					height: 30px;
+					line-height: 30px;
+					color: #A2A3A5;
+					display: block;
+					padding-left: 45px;
+				}
+			}
+			.icon-generic{
+				position: absolute;
+				left: 11px + 4px;
+				top: 2px;
+				@include s($icons, icon-generic);
+			}
+			.icon-collaboration{
+				position: absolute;
+				left: 6px + 4px - 1px;
+				top: -6px;
+				@include s($icons, icon-collaboration);
+			}
+		}
+		.globalproject__create{
+			background: #666666;
+			border-radius: 6px;
+			padding: 4px 4px 4px 45px;
+			height: 45px - 8px;
+			line-height: 45px;
+			font-size: 10px;
+			text-decoration: none;
+			position: relative;
+			cursor: pointer;
+			i{
+				display: inline-block;
+				position: absolute;
+				left: 2px + 4px + 4px;
+				top: 5px;
+				@include s($icons, icon-collaboration);
+			}
+		}
+	}
+}
+// .list{
+// 	margin: 0 40px 35px 40px;
+// 	text-transform: uppercase;
+// 	dt{
+// 		font-size: 12px;
+// 		color: #fff;
+// 		border-bottom: 1px solid #595A5D;
+// 		padding-bottom: 6px;
+// 		margin-bottom: 10px;
+// 	}
+// 	ul{
+// 		list-style: none;
+// 		font-size: 10px;
+// 		li{
+// 			margin-bottom: 10px;
+// 		}
+// 		a{
+// 			text-decoration: none;
+// 			color: #fff;
+// 		}
+// 		span{
+// 			color: #77BF9D;
+// 			font-size: 8px;
+// 		}
+// 		.list__active{
+// 			position: relative;
+// 			&:before{
+// 				width: 30px;
+// 				height: 9px;
+// 				background: #77BF9D;
+// 				left: -40px;
+// 				top: 2px;
+// 				position: absolute;
+// 				content: ' ';
+// 			}
+// 		}
+// 	}
+// }
 .dragndrop{
 	width: 420px - 40px;
 	margin: 40px auto 40px auto;

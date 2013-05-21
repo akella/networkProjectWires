@@ -650,3 +650,148 @@
 			padding-left: 68px;
 		}
 	}
+
+// workspace
+.l{
+	width: 100%;
+	top: 55px;
+	bottom: 0;
+	right: 0;
+	left: 0;
+	position: absolute;
+	overflow: hidden;
+	.l-projectslib{
+		@include transition(all .2s);
+		position: absolute;
+		left: 0;
+		top: 0;
+		bottom: 0;
+		width: 100%;
+		background: #52b5b7;
+		@include background-image(radial-gradient(#8bcbc8,#52b5b7));
+		overflow: auto;
+	}
+	.l-sideinfo{
+		@include transition(all .2s);
+		position: absolute;
+		width: 20%;
+		right: -20%;
+		top: 0;
+		bottom: 0;
+		background: #e3e3e3;
+		overflow: auto;
+	}
+}
+	.is-workspaceview{
+		.l{
+			.l-projectslib{
+				width: 85%;
+			}
+			.l-sideinfo{
+				width: 15%;
+				right: 0;
+			}
+		}
+		.button_feed{
+			@include transition(all .2s);
+			display: none;
+			top: -20px;
+		}
+	}
+
+
+.button_feed{
+	@include transition(all .2s);
+	display: block;
+	position: absolute;
+	top: 6px;
+	right: 0px;
+	width: 165px;
+	height: 34px;
+	line-height: 34px;
+	text-align: center;
+	text-transform: uppercase;
+	color: #1a1a1a;
+	background: #e3e3e3;
+	cursor: pointer;
+	span{
+		display: block;
+		position: relative;
+		&:before{
+			position: absolute;
+			top: 0;
+			left: -10px;
+			content: "";
+			width: 0px;
+			height: 0px;
+			border-style: solid;
+			border-width: 17px 10px 17px 0;
+			border-color: transparent #e3e3e3 transparent transparent;
+		}
+	}
+}
+.workspce{
+
+}
+	.workspace__holder{
+		padding: 25px 50px 25px 50px;
+	}
+	.workspace__info{
+		line-height: 1;
+		@extend %clr;
+		color: #fff;
+		text-transform: uppercase;
+		font-size: 10px;
+		margin-bottom: 30px;
+	}
+	.workspace__name{
+		float: left;
+		margin-right: 40px;
+	}
+	.workspace__updated{
+		float: left;
+		margin-right: 40px;
+	}
+	.range_workspace{
+		display: inline-block;
+		-webkit-appearance: none;
+		background: #d7eeee;
+		border-bottom: 1px solid #88cbcc;
+		height: 1px;
+		vertical-align: middle;
+		width: 155px;
+		&::-webkit-slider-thumb {
+			-webkit-appearance: none;
+			width: 10px;
+			height: 10px;
+			border-radius: 10px;
+			border: 1px solid #efefef;
+			box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+			@include background-image(linear-gradient(#efefef, #a8a8a8));
+			// background-position: 50%;
+			cursor: pointer;
+		}
+	}
+	.workspace__list{
+		@extend %clr;
+		margin-left: -20px;
+	}
+		.workspace__item{
+			float: left;
+			margin-left: 20px;
+			margin-bottom: 25px;
+			width: 298px;
+			height: 248px;
+			background: #e3e3e3;
+			border: 1px solid #fff;
+			border-radius: 20px;
+		}
+		.workspace__item_create{
+			background: rgba(255,255,255,.4);
+			border: 1px dashed #fff;
+			a{
+				display: block;
+				width: 100%;
+				height: 100%;
+			}
+		}

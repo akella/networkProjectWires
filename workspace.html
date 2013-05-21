@@ -22,7 +22,7 @@
 		$('.list').click(function (e) {
 			$('body').toggleClass('is-thumbview');
 		});
-		$('.l-sideinfo, .button_feed').click(function (e) {
+		$('.activity__title, .button_feed').click(function (e) {
 			$('body').toggleClass('is-workspaceview');
 		});
 		/*scroll*/
@@ -59,7 +59,7 @@
 	<div class="topline__head">
 		<div class="globalproject"><i class="topline__ci"></i> <div class="globalproject__name">Workspace </div><div class="globalproject__arrow"></div>
 		
-		<div class="globalproject__drop" style="display:none;">
+		<div class="globalproject__drop">
 			<h3>WORKSPACE</h3>
 			<ul>
 				<li><a href="#"><i class="icon-generic"></i>Another prkject</a></li>
@@ -104,15 +104,79 @@
 				<input type="range" name="" class="range range_workspace" id="">
 			</div>
 			<div class="workspace__list">
-				<div class="workspace__item"></div>
-				<div class="workspace__item workspace__item_create"><a href="#"></a></div>
-				<div class="workspace__item"></div>
-				<div class="workspace__item"></div>
-				<div class="workspace__item"></div>
-				<div class="workspace__item"></div>
-				<div class="workspace__item"></div>
-				<div class="workspace__item"></div>
-				<div class="workspace__item"></div>
+				<div class="workspace__item">
+					<div class="workspace__settings"></div>
+					<div class="workspace__content">
+						<h2 class="workspace__title">My porject</h2>
+						<div class="workspace__media"></div>
+						<div class="workspace__progress">
+							<div style="width:2%;"></div>
+						</div>
+						<div class="workspace__meta">
+							<div class="workspace__files">
+								Files
+								<strong>0</strong>
+							</div>
+							<div class="workspace__space">
+								Space remaining
+								<strong>2 Gb</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="workspace__item">
+					<div class="workspace__settings"></div>
+					<div class="workspace__content">
+						<h2 class="workspace__title">Film project a</h2>
+						<div class="workspace__media">
+							<div class="workspace__group"></div>
+							<img src="http://lorempixel.com/400/400/nature/">
+						</div>
+						<div class="workspace__progress">
+							<div style="width:10%;"></div>
+						</div>
+						<div class="workspace__meta">
+							<div class="workspace__files">
+								Files
+								<strong>344</strong>
+							</div>
+							<div class="workspace__space">
+								Space remaining
+								<strong>1.1 Tb</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="workspace__item">
+					<div class="workspace__settings"></div>
+					<div class="workspace__content">
+						<h2 class="workspace__title">Racing film x</h2>
+						<div class="workspace__media">
+							<div class="workspace__group"></div>
+							<img src="http://lorempixel.com/300/300/nature/">
+						</div>
+						<div class="workspace__progress">
+							<div style="width:80%; background:#be272d;"></div>
+						</div>
+						<div class="workspace__meta">
+							<div class="workspace__files">
+								Files
+								<strong>4876</strong>
+							</div>
+							<div class="workspace__space">
+								Space remaining
+								<strong>3 Gb</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="workspace__item workspace__item_create">
+					<a href="#">
+						<div class="workspace__team"></div>
+						<h2 class="workspace__title">Create a team project</h2>
+						<span class="workspace__info">Collaborate, share <br> & manage your entire team</span>
+					</a>
+				</div>
 			</div>
 		</div>
 		<!-- /.workspace__holder -->
@@ -121,7 +185,60 @@
 
 	<!-- BEGIN  l-sideinfo-->
 	<div class="l-sideinfo">
+		<div class="activity">
+			<h2 class="activity__title">Activity Feed</h2>
+				<ul class="activity__list">
+					<h2 class="activity__project">Urban Outlaw</h2>
+					<li>
+						<div class="activity__info"><strong>Jason Brahms</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">1 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Darren Wong</strong> - Commented on Comps_v3.2</div>
+						<div class="activity__time">3 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Jason Brahms</strong> - Curabitur fermentum purus et tortor lacinia semper donec dui justo.</div>
+						<div class="activity__time">2 days ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Sean Vuckori</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">A week ago</div>
+					</li>
+				</ul>
 
+				<ul class="activity__list">
+					<h2 class="activity__project">Project film A</h2>
+					<li>
+						<div class="activity__info"><strong>Dan Hitomi</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">1 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Darren Wong</strong> - Commented on Comps_v3.2</div>
+						<div class="activity__time">3 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Dan Hitomi</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">1 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Dan Hitomi</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">1 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Paul Kane</strong> - Curabitur fermentum purus et tortor lacinia semper donec dui justo.</div>
+						<div class="activity__time">2 days ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Jason Brahms</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">A week ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Jason Brahms</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">A week ago</div>
+					</li>
+				</ul>
+		</div>
 	</div>
 	<!-- END l-sideinfo-->
 	

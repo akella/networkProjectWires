@@ -12,26 +12,6 @@
 	<script>
 	jQuery(document).ready(function($) {
 
-		$('.project').click(function (e) {
-			$(this).siblings().removeClass('project_active');
-			$(this).addClass('project_active');
-		});
-		$('.topline').click(function (e) {
-			$('body').toggleClass('is-shownotif');
-		});
-		$('.list').click(function (e) {
-			$('body').toggleClass('is-thumbview');
-		});
-		/*scroll*/
-		// if ($('.l-projectview').length>0) {
-		// 		pane = $('.l-projectview');
-		// 		pane.jScrollPane({
-		// 	  	autoReinitialise: true,
-		// 	  	hideFocus: true,
-		// 	  	animateTo: true
-		// 	});
-		// 	var api = pane.data('jsp');
-		// };
 
 		//window resize
 		windowh = $(window).height();
@@ -162,30 +142,67 @@
 	
 	<!-- BEGIN  l-thumbnails-->
 	<div class="l-thumbnails">
-		<ul class="files">
-			<li><a href="#" class="files__icon"></a></li>
-			<li><a href="#" class="files__icon"></a></li>
-			<li><a href="#" class="files__icon"></a></li>
-			<li><a href="#" class="files__icon"></a></li>
-			<li><a href="#" class="files__icon"></a></li>
-			<li><a href="#" class="files__icon"></a></li>
-			<li><a href="#" class="files__icon"></a></li>
-			<li><a href="#" class="files__icon"></a></li>
-			<li><a href="#" class="files__icon"></a></li>
-			<li><a href="#" class="files__icon"></a></li>
-			<li><a href="#" class="files__icon"></a></li>
-			<li><a href="#" class="files__icon"></a></li>
-		</ul>
-		<div class="dragndrop">
-			<div class="dragndrop__icon"></div>
-			<div class="dragndrop__head">
+		<!-- BEGIN  filemeta-->
+		<div class="filemeta">
+			<div class="filemeta__wrap">
+				<div class="filemeta__title">
+					RECENT UPLOADS 
+					<div class="filemeta__parent">MY STUFF</div>
+					<div class="filemeta__settings"></div>
+				</div>
+				<div class="filemeta__sort"><a href="#">NAME</a><a href="#">Date</a><a href="#">Type</a></div>
+				
+			</div>
+			
+			<div class="filemeta__addfile">
+				<div class="filemeta__addfileicon"></div>
+			</div>
+		</div>
+		<!-- END filemeta-->
+		
+		<!-- BEGIN  toolbar-->
+		<div class="toolbar">
+			<div class="toolbar__play"></div>
+			<div class="toolbar__fave"></div>
+			<div class="toolbar__share"></div>
+			<div class="toolbar__download"></div>
+			<div class="toolbar__delete"></div>
+			<div class="toolbar__separator"></div>
+			<div class="toolbar__empty"></div>
+			<div class="toolbar__empty"></div>
+			<div class="toolbar__empty"></div>
+		</div>
+		<!-- END toolbar-->
+		
+		<!-- BEGIN  playlist-->
+		<div class="playlist">
+			<div class="playlist__header">
+				<h3>playlist</h3>
+				<input type="range" name="" id="">
+			</div>
+			<div class="files files_row">
+				<!-- FILES GO HERE -->
+			</div>
+		</div>
+		<!-- END playlist-->
+		
+		<!-- begin tips -->
+		<div class="tip tip_dragndrop">
+			<div class="tip__icon"></div>
+			<div class="tip__head">
 				DRAG & DROP
 				<span>( DRAG IT HERE OR BROWSE FOR IT ON THE RIGHT )</span>
 			</div>
 		</div>
-		<div class="files__view">
-			<input type="range" name="" id="">
+		<div class="tip tip_teamproject">
+			<div class="tip__icon"></div>
+			<div class="tip__head">
+				CREATE A TEAM PROJECT
+				<span>COLLABORATE, SHARE, & MANAGE YOUR ENTIRE TEAM</span>
+			</div>
 		</div>
+		<div class="tip__close">CLOSE PRO TIPS</div>
+		<!-- end tips -->
 	</div>
 	<!-- END l-thumbnails-->
 	

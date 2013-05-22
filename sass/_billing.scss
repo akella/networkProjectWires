@@ -1033,9 +1033,10 @@
 		border: 0;
 		width: 260px;
 		padding: 13px 20px;
-		resize: vertical;
+		resize: none;
 		font-size: 10px;
 		@include lite();
+		height: 80px;
 	}
 	.popup__bottom{
 		@extend %clr;

@@ -401,7 +401,110 @@
 		.toolbar__#{$s}{
 			display: inline-block;
 			@include s($icons, #{$s});
+			cursor: pointer;
 		}
+	}
+}
+.files{
+	margin: 10px;
+	&.files_row{
+		white-space: nowrap;
+		overflow: auto;
+		width: 100%;
+		margin: 0;
+		padding: 10px;
+		@include box-sizing(border-box);
+	}
+}
+.file{
+	margin: 0 5px 5px 0;
+	border: 1px solid #666666;
+	display: inline-block;
+	vertical-align: top;
+	width: 133px;
+	height: 97px;
+	position: relative;
+	background: #1B1B1F;
+	cursor: pointer;
+	color: #FFFFFF;
+	&:hover, &.file_active{
+		border-color: #FFF;
+		background: #CFCFDE;
+		color: #000000;
+	}
+	.file__title{
+		position: absolute;
+	}
+	.file__pic{
+		width: 128px;
+		height: 72px;
+		position: absolute;
+		top: 2px;
+		left: 3px;
+		background: #000;
+		text-align: center;
+		overflow: hidden;
+	}
+	.file__icon{
+		display: inline-block;
+		@include s($icons, fileicon);
+		margin-top: 16px;
+	}
+	.file__title{
+		left: 3px;
+		bottom: 4px;
+		font-size: 11px;
+		width: 97%;
+		position: absolute;
+		overflow: hidden;
+		-ms-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+	}
+	&.file__loading{
+		.file__title{
+			display: none;
+		}
+	}
+	.file__status{
+		position: absolute;
+		top: 31px;
+		left: 0;
+		width: 100%;
+		text-align: center;
+		background: #77BF9D;
+		height: 27px - 5px;
+		padding-top: 5px;
+		color: #000;
+		text-transform: uppercase;
+	}
+	.file__progress{
+		width: 122px;
+		margin: 0 auto;
+		height: 3px;
+		border-radius: 10px;
+		background: #355546;
+		div{
+			height: 3px;
+			background: #FFFFFF;
+		}
+	}
+}
+
+.playlist__header{
+	background: #242426;
+	border-bottom: 2px solid #56585C;
+	padding: 10px 0 10px 19px;
+	position: relative;
+	h3{
+		text-transform: uppercase;
+		font-weight: normal;
+		color: #fff;
+		font-size: 11px;
+	}
+	input{
+		position: absolute;
+		right: 10px;
+		top: 10px;
 	}
 }
 

@@ -929,3 +929,133 @@
 		font-size: 11px;
 		color: #969696;
 	}
+
+
+
+
+
+//popup
+.overlay{
+	position: fixed;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	opacity: 0;
+	z-index: 2000;
+	background: rgba(#000,.6);
+	@include transition(all 500ms linear);
+	&.is-shown{
+		opacity: 1;
+	}
+}
+.popup{
+	position: fixed;
+	top: 185px;
+	z-index: 2100;
+	left: 50%;
+	width: 300px;
+	padding-top: 15px;
+	margin-left: -150px;
+	background: #e3e3e3;
+	border: 1px solid #f8f8f8;
+	border-radius: 10px;
+	@include transform(translate3d(0,-700px,0));
+	@include transition(all 500ms ceaser($easeInOutBack));
+	&.is-shown{
+		@include transform(translate3d(0,0,0));
+	}
+	.popup__header{
+		text-align: center;
+		margin-bottom: 15px;
+		line-height: 1;
+	}
+	.popup__title{
+		text-transform: uppercase;
+		font-weight: normal;
+	}
+	.popup__share{
+		display: inline-block;
+		@include sized-sprite($icons, share_popup);
+		vertical-align: top;
+	}
+	.popup__media{
+		text-align: center;
+		img{
+			display: block;
+			margin: 0 auto;
+		}
+	}
+	.popup__content{
+		padding: 20px 5px 6px;
+	}
+	.popup__menu{
+		color: #c9c9c9;
+		text-transform: uppercase;
+		border-bottom: 2px solid #c9c9c9;
+		margin-bottom: 15px;
+		padding: 0 7px 7px;
+		a{
+			color: #c9c9c9;
+			text-decoration: none;
+		}
+		ul{
+			@extend %clr;
+			margin-left: -37px;
+		}
+		li{
+			float: left;
+			margin-left: 37px;
+			list-style: none;
+			display: inline-block;
+			&.is-active{
+				color: #666;
+				a{
+					cursor: default;
+					color: #666;
+				}
+			}
+		}
+	}
+	.popup__info{
+
+	}
+	.popup_input{
+		width: 278px;
+		border: 0;
+		border-radius: 10px;
+		padding: 6px;
+		font-size: 10px;
+		margin-bottom: 12px;
+	}
+	.popup_textarea{
+		margin-left: -5px;
+		border: 0;
+		width: 260px;
+		padding: 13px 20px;
+		resize: vertical;
+		font-size: 10px;
+		@include lite();
+	}
+	.popup__bottom{
+		@extend %clr;
+		padding: 0 5px 5px 5px;
+		.button{
+			height: 29px;
+			line-height: 29px;
+			text-transform: uppercase;
+			text-decoration: none;
+			color: #fff;
+			background: #c9c9c9;
+			text-align: center;
+			display: block;
+			width: 140px;
+			float: left;
+			border-radius: 10px;
+		}
+		.button_send{
+			float: right;
+			background: #52b5b7;
+		}
+	}
+}

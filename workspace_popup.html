@@ -1,0 +1,285 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.jscrollpane.js"></script>
+	<script>
+	jQuery(document).ready(function($) {
+
+		$('.project').click(function (e) {
+			$(this).siblings().removeClass('project_active');
+			$(this).addClass('project_active');
+		});
+		$('.topline').click(function (e) {
+			$('body').toggleClass('is-shownotif');
+		});
+		$('.list').click(function (e) {
+			$('body').toggleClass('is-thumbview');
+		});
+		$('.activity__title, .button_feed').click(function (e) {
+			$('body').toggleClass('is-workspaceview');
+		});
+		/*scroll*/
+		// if ($('.l-projectview').length>0) {
+		// 		pane = $('.l-projectview');
+		// 		pane.jScrollPane({
+		// 	  	autoReinitialise: true,
+		// 	  	hideFocus: true,
+		// 	  	animateTo: true
+		// 	});
+		// 	var api = pane.data('jsp');
+		// };
+
+		//window resize
+		windowh = $(window).height();
+			$('.l').height(windowh - 55);
+		$(window).resize(function(event) {
+			windowh = $(window).height();
+			$('.l').height(windowh - 55);
+			// api.reinitialise();
+			// api_nav.reinitialise();
+			// api_content.reinitialise();
+		});
+	});
+
+	</script>
+</head>
+<body class="b-workspace">
+<div class="notification">
+	something
+</div>
+<!-- BEGIN  topline-->
+<div class="topline">
+	<div class="topline__head">
+		<div class="globalproject"><i class="topline__ci"></i> <div class="globalproject__name">Workspace </div><div class="globalproject__arrow"></div>
+		
+		<div class="globalproject__drop">
+			<h3>WORKSPACE</h3>
+			<ul>
+				<li><a href="#"><i class="icon-generic"></i>Another prkject</a></li>
+				<li><a href="#"><i class="icon-collaboration"></i>Whatever</a></li>
+			</ul>
+			<div class="globalproject__create"><i></i>Create new project</div>
+		</div>
+		
+		</div>
+	</div>
+	<a href="#" class="mail has-new">
+		<div class="mail__num">11</div><div class="mail__icon"></div>
+	</a>
+	<div class="user">
+		<a href="#" class="user__name" href="#"><div class="user__icon"></div>JOHN SMITH</a><span>/</span><a href="#" class="user__logout">LOGOUT</a> <div class="user__help">?</div>
+	</div>
+	<div class="uploading" style="display:none;">
+		<div class="uploading__icon"></div>
+		<div class="uploading__title">UPLOADING</div>
+		<div class="uploading__progress">
+			<div style="width:80%;"></div>
+		</div>
+		<div class="uploading__info">23%  -  8 of 12 FILES</div>
+		<div class="uploading__status">STATUS</div>
+	</div>
+	
+</div>
+<!-- END topline-->
+
+
+<!-- BEGIN  workspace-->
+<div class="workspace l"><div class="l__scrollme">
+	
+	<!-- BEGIN  l-projectslib-->
+	<div class="l-projectslib">
+		<div class="button_feed"><span>Activity Feed</span></div>
+		<!-- BEGIN .workspace__holder -->
+		<div class="workspace__holder">
+			<div class="workspace__info">
+				<div class="workspace__name">Name</div>
+				<div class="workspace__updated">Updated</div>
+				<input type="range" name="" class="range range_workspace" id="">
+			</div>
+			<div class="workspace__list">
+				<div class="workspace__item">
+					<div class="workspace__settings"></div>
+					<div class="workspace__content">
+						<h2 class="workspace__title">My porject</h2>
+						<div class="workspace__media"></div>
+						<div class="workspace__progress">
+							<div style="width:2%;"></div>
+						</div>
+						<div class="workspace__meta">
+							<div class="workspace__files">
+								Files
+								<strong>0</strong>
+							</div>
+							<div class="workspace__space">
+								Space remaining
+								<strong>2 Gb</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="workspace__item">
+					<div class="workspace__settings"></div>
+					<div class="workspace__content">
+						<h2 class="workspace__title">Film project a</h2>
+						<div class="workspace__media">
+							<div class="workspace__group"></div>
+							<img src="http://lorempixel.com/400/400/nature/">
+						</div>
+						<div class="workspace__progress">
+							<div style="width:10%;"></div>
+						</div>
+						<div class="workspace__meta">
+							<div class="workspace__files">
+								Files
+								<strong>344</strong>
+							</div>
+							<div class="workspace__space">
+								Space remaining
+								<strong>1.1 Tb</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="workspace__item">
+					<div class="workspace__settings"></div>
+					<div class="workspace__content">
+						<h2 class="workspace__title">Racing film x</h2>
+						<div class="workspace__media">
+							<div class="workspace__group"></div>
+							<img src="http://lorempixel.com/300/300/nature/">
+						</div>
+						<div class="workspace__progress">
+							<div style="width:80%; background:#be272d;"></div>
+						</div>
+						<div class="workspace__meta">
+							<div class="workspace__files">
+								Files
+								<strong>4876</strong>
+							</div>
+							<div class="workspace__space">
+								Space remaining
+								<strong>3 Gb</strong>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="workspace__item workspace__item_create">
+					<a href="#">
+						<div class="workspace__team"></div>
+						<h2 class="workspace__title">Create a team project</h2>
+						<span class="workspace__info">Collaborate, share <br> & manage your entire team</span>
+					</a>
+				</div>
+			</div>
+		</div>
+		<!-- /.workspace__holder -->
+	</div>
+	<!-- END l-projectslib-->
+
+	<!-- BEGIN  l-sideinfo-->
+	<div class="l-sideinfo">
+		<div class="activity">
+			<h2 class="activity__title">Activity Feed</h2>
+				<ul class="activity__list">
+					<h2 class="activity__project">Urban Outlaw</h2>
+					<li>
+						<div class="activity__info"><strong>Jason Brahms</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">1 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Darren Wong</strong> - Commented on Comps_v3.2</div>
+						<div class="activity__time">3 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Jason Brahms</strong> - Curabitur fermentum purus et tortor lacinia semper donec dui justo.</div>
+						<div class="activity__time">2 days ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Sean Vuckori</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">A week ago</div>
+					</li>
+				</ul>
+
+				<ul class="activity__list">
+					<h2 class="activity__project">Project film A</h2>
+					<li>
+						<div class="activity__info"><strong>Dan Hitomi</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">1 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Darren Wong</strong> - Commented on Comps_v3.2</div>
+						<div class="activity__time">3 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Dan Hitomi</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">1 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Dan Hitomi</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">1 hours ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Paul Kane</strong> - Curabitur fermentum purus et tortor lacinia semper donec dui justo.</div>
+						<div class="activity__time">2 days ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Jason Brahms</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">A week ago</div>
+					</li>
+					<li>
+						<div class="activity__info"><strong>Jason Brahms</strong> - Uploaded 24 Files</div>
+						<div class="activity__time">A week ago</div>
+					</li>
+				</ul>
+		</div>
+	</div>
+	<!-- END l-sideinfo-->
+	
+</div></div>
+<!-- END dashboard-->
+
+
+<div class="overlay "></div>
+<!-- BEGIN  popup-->
+<div class="popup">
+	<div class="popup__header">
+		<h2 class="popup__title"><i class="popup__share"></i> Share</h2>
+	</div>
+	<div class="popup__media">
+		<img src="img/img_popup.jpg">
+	</div>
+	<div class="popup__content">
+		<div class="popup__menu">
+			<ul>
+				<li class="is-active"><a href="#">Email</a></li>
+				<li><a href="#">Link</a></li>
+			</ul>
+		</div>
+		<div class="popup__info">
+			<input type="email" name="" value="" class="popup_input" placeholder="RECIPIENT">
+			<textarea rows="" cols="" name="" placeholder="COMPOSE" class="popup_textarea"></textarea>
+		</div>
+	</div>
+	<div class="popup__bottom">
+		<a href="#" class="button">Cancel</a>
+		<a href="#" class="button button_send">Send</a>
+	</div>
+</div>
+<!-- END popup-->
+<!-- this is just to show animation -->
+<script>
+	$(document).ready(function() {
+		$('body').click(function(){
+			$('.overlay,.popup').toggleClass('is-shown');
+		});
+	});
+</script>
+</body>
+</html>

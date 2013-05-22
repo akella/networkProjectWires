@@ -562,7 +562,7 @@ a img, fieldset { border: none; }
 .popup .popup__menu li.is-active { color: #666; }
 .popup .popup__menu li.is-active a { cursor: default; color: #666; }
 .popup .popup_input { width: 278px; border: 0; border-radius: 10px; padding: 6px; font-size: 10px; margin-bottom: 12px; }
-.popup .popup_textarea { margin-left: -5px; border: 0; width: 260px; padding: 13px 20px; resize: vertical; font-size: 10px; font-family: "GothamLight",arial,sans-serif; }
+.popup .popup_textarea { margin-left: -5px; border: 0; width: 260px; padding: 13px 20px; resize: none; font-size: 10px; font-family: "GothamLight",arial,sans-serif; height: 80px; }
 .popup .popup__bottom { padding: 0 5px 5px 5px; }
 .popup .popup__bottom .button { height: 29px; line-height: 29px; text-transform: uppercase; text-decoration: none; color: #fff; background: #c9c9c9; text-align: center; display: block; width: 140px; float: left; border-radius: 10px; }
 .popup .popup__bottom .button_send { float: right; background: #52b5b7; }

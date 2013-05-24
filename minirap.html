@@ -1,0 +1,587 @@
+<!doctype html>
+<!--[if lte IE 8]><html class="lteie8"><![endif]-->
+<!--[if gt IE 8]><!--><html><!--<![endif]-->
+<head>
+	<meta charset="utf-8">
+	<title>Template</title>
+	<meta name="viewport" content="width=device-width"/>
+	<link rel="stylesheet" media="screen" href="css/screen.css" >
+	<script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+	<script src="js/jquery.mousewheel.js"></script>
+	<script src="js/jquery.jscrollpane.js"></script>
+	<script>
+	jQuery(document).ready(function($) {
+
+
+		//window resize
+		windowh = $(window).height();
+		$('.l').height(windowh - 55);
+		$(window).resize(function(event) {
+			windowh = $(window).height();
+			$('.l').height(windowh - 55);
+			// api.reinitialise();
+			// api_nav.reinitialise();
+			// api_content.reinitialise();
+		});
+	});
+
+	</script>
+</head>
+<body class="b-dashboard">
+<div class="notification">
+	something
+</div>
+<!-- BEGIN  topline-->
+<div class="topline">
+	<div class="topline__head">
+		<div class="globalproject"><i class="topline__ci"></i> <div class="globalproject__name">My super project </div><div class="globalproject__arrow"></div>
+		
+		<div class="globalproject__drop">
+			<h3>WORKSPACE</h3>
+			<ul>
+				<li><a href="#"><i class="icon-generic"></i>Another prkject</a></li>
+				<li><a href="#"><i class="icon-collaboration"></i>Whatever</a></li>
+			</ul>
+			<div class="globalproject__create"><i></i>Create new project</div>
+		</div>
+		
+		</div>
+	</div>
+	<a href="#" class="mail has-new">
+		<div class="mail__num">11</div><div class="mail__icon"></div>
+	</a>
+	<div class="user">
+		<a href="#" class="user__name" href="#"><div class="user__icon"></div>JOHN SMITH</a><span>/</span><a href="#" class="user__logout">LOGOUT</a> <div class="user__help">?</div>
+	</div>
+	<div class="uploading">
+		<div class="uploading__icon"></div>
+		<div class="uploading__title">UPLOADING</div>
+		<div class="uploading__progress">
+			<div style="width:80%;"></div>
+		</div>
+		<div class="uploading__info">23%  -  8 of 12 FILES</div>
+		<div class="uploading__status">STATUS</div>
+	</div>
+	
+</div>
+<!-- END topline-->
+
+
+<!-- BEGIN  dashboard-->
+<div class="dashboard l"><div class="l__scrollme">
+	<!-- BEGIN  l-sidebar-->
+	<div class="l-sidebar">
+		<div class="search">
+			<div class="search__icon"></div>
+			<input type="text" name="" placeholder="search" id="">
+		</div>
+		
+		<!-- BEGIN  list-->
+		<div class="list list_devices list_hilite">
+			<h3>CONNECTED DEVICES <div class="list__toggle"></div></h3>
+			
+			<ul>
+				<li><i class="icon icon_wireless"></i><a href="#">SONY F55 - CAMERA A <span>(20)</span></a></li>
+				<li><i class="icon icon_wireless"></i><a href="#">SONY F55 - CAMERA A <span>(20)</span></a></li>
+				<li><i class="icon icon_wired"></i><a href="#">ODA - ARCHIVE X</a></li>
+			</ul>
+		</div>
+		<!-- END list-->
+		
+		
+		<!-- begin list -->
+		<div class="list list_mystuff">
+			<h3>MY STUFF <div class="list__toggle"></div></h3>
+			<ul>
+				<li><a href="#">RECENT UPLOADS <span>(20)</span></a></li>
+				<li><a href="#">STARRED</a></li>
+				<li class="parent"><div class="parent__icon"></div><a href="#">FOLDERS</a>
+					<ul>
+						<li><a href="#">PRE-VISUALIZATION A</a></li>
+						<li><a href="#">PRE-VISUALIZATION B</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end list -->
+		
+		<!-- begin list -->
+		<div class="list list_collaboration">
+			<h3>COLLABORATION <div class="list__toggle"></div></h3>
+			
+			<ul>
+				<li><a href="#">RECENTLY SHARED <span>(20)</span></a></li>
+				<li class="parent is-inactive"><div class="parent__icon"></div><a href="#">ALL SHARED</a>
+					<ul>
+						<li><a href="#">PRE-VISUALIZATION A <span>20</span></a></li>
+						<li><a href="#">PRE-VISUALIZATION B</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end list -->
+		
+		<!-- begin list -->
+		<div class="list list_library">
+			<h3>COMPANY LIBRARY <div class="list__toggle"></div></h3>
+			
+			<ul>
+				<li class="parent"><div class="parent__icon"></div><a href="#">COLLECTIONS</a>
+					<ul>
+						<li><a href="#">PRE-VISUALIZATION A <span>20</span></a></li>
+						<li><a href="#">PRE-VISUALIZATION B</a></li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		<!-- end list -->
+		
+		
+	</div>
+	<!-- END l-sidebar-->
+	
+	<!-- BEGIN  l-thumbnails-->
+	<div class="l-thumbnails">
+		<!-- BEGIN  filemeta-->
+		<div class="filemeta">
+			<div class="filemeta__wrap">
+				<div class="filemeta__title">
+					RECENT UPLOADS 
+					<div class="filemeta__parent">MY STUFF</div>
+					<div class="filemeta__settings"></div>
+				</div>
+				<div class="filemeta__sort"><a href="#">NAME</a><a href="#">Date</a><a href="#">Type</a></div>
+				
+			</div>
+			
+			<div class="filemeta__addfile">
+				<div class="filemeta__addfileicon"></div>
+			</div>
+		</div>
+		<!-- END filemeta-->
+		
+		<!-- BEGIN  files-->
+		<div class="files">
+			<!-- BEGIN  file-->
+			<div class="file">
+				<div class="file__pic"><div class="file__icon"></div></div>
+				<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+			</div>
+			<!-- END file-->
+			<!-- BEGIN  file-->
+			<div class="file file_active">
+				<div class="file__pic"><div class="file__icon"></div></div>
+				<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+			</div>
+			<!-- END file-->
+			<!-- BEGIN  file-->
+			<div class="file file_loading">
+				<div class="file__pic"><div class="file__icon"></div></div>
+				<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+				<div class="file__status">
+					<div class="file__statustitle">Connecting</div>
+				</div>
+			</div>
+			<!-- END file-->
+			<!-- BEGIN  file-->
+			<div class="file file_loading">
+				<div class="file__pic"><div class="file__icon"></div></div>
+				<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+				<div class="file__status">
+					<div class="file__statustitle">Loading</div>
+					<div class="file__progress"><div style="width:30%;"></div></div>
+				</div>
+			</div>
+			<!-- END file-->
+		</div>
+		<!-- END files-->
+		
+		<!-- BEGIN  toolbar-->
+		<div class="toolbar">
+			<div class="toolbar__head"><div class="toolbar__headicon"></div></div>
+			<ul>
+			<li><div class="toolbar__play"></div></li>
+			<li><div class="toolbar__fave"></div></li>
+			<li><div class="toolbar__share"></div></li>
+			<li><div class="toolbar__download"></div></li>
+			<li><div class="toolbar__delete"></div></li>
+			</ul>
+			<div class="toolbar__separator"></div>
+			<div class="toolbar__empty"></div>
+			<div class="toolbar__empty"></div>
+			<div class="toolbar__empty"></div>
+		</div>
+		<!-- END toolbar-->
+		
+		
+		
+		<!-- begin tips -->
+		<div class="tip tip_dragndrop">
+			<div class="tip__icon"></div>
+			<div class="tip__head">
+				DRAG & DROP
+				<span>( DRAG IT HERE OR BROWSE FOR IT ON THE RIGHT )</span>
+			</div>
+		</div>
+		<div class="tip tip_teamproject">
+			<div class="tip__icon"></div>
+			<div class="tip__head">
+				CREATE A TEAM PROJECT
+				<span>COLLABORATE, SHARE, & MANAGE YOUR ENTIRE TEAM</span>
+			</div>
+		</div>
+		<div class="tip__close">CLOSE PRO TIPS</div>
+		<!-- end tips -->
+		
+		
+		<!-- BEGIN  playlist-->
+		<div class="playlist">
+			<div class="playlist__header">
+				<h3>playlist</h3>
+				<input type="range" name="" id="">
+			</div>
+			<!-- BEGIN  files-->
+			<div class="files files_row">
+				<!-- BEGIN  file-->
+				<div class="file">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+				</div>
+				<!-- END file-->
+				<!-- BEGIN  file-->
+				<div class="file file_active">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+				</div>
+				<!-- END file-->
+				<!-- BEGIN  file-->
+				<div class="file file_loading">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+					<div class="file__status">
+						<div class="file__statustitle">Connecting</div>
+					</div>
+				</div>
+				<!-- END file-->
+				<!-- BEGIN  file-->
+				<div class="file file_loading">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+					<div class="file__status">
+						<div class="file__statustitle">Loading</div>
+						<div class="file__progress"><div style="width:30%;"></div></div>
+					</div>
+				</div>
+				<!-- END file-->
+				<!-- BEGIN  file-->
+				<div class="file">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+				</div>
+				<!-- END file-->
+				<!-- BEGIN  file-->
+				<div class="file file_active">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+				</div>
+				<!-- END file-->
+				<!-- BEGIN  file-->
+				<div class="file file_loading">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+					<div class="file__status">
+						<div class="file__statustitle">Connecting</div>
+					</div>
+				</div>
+				<!-- END file-->
+				<!-- BEGIN  file-->
+				<div class="file file_loading">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+					<div class="file__status">
+						<div class="file__statustitle">Loading</div>
+						<div class="file__progress"><div style="width:30%;"></div></div>
+					</div>
+				</div>
+				<!-- END file-->
+				<!-- BEGIN  file-->
+				<div class="file">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+				</div>
+				<!-- END file-->
+				<!-- BEGIN  file-->
+				<div class="file file_active">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+				</div>
+				<!-- END file-->
+				<!-- BEGIN  file-->
+				<div class="file file_loading">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+					<div class="file__status">
+						<div class="file__statustitle">Connecting</div>
+					</div>
+				</div>
+				<!-- END file-->
+				<!-- BEGIN  file-->
+				<div class="file file_loading">
+					<div class="file__pic"><div class="file__icon"></div></div>
+					<div class="file__title">ciFIles_Roadmap...Cam_A</div>
+					<div class="file__status">
+						<div class="file__statustitle">Loading</div>
+						<div class="file__progress"><div style="width:30%;"></div></div>
+					</div>
+				</div>
+				<!-- END file-->
+			</div>
+			<!-- END files-->
+		</div>
+		<!-- END playlist-->
+	</div>
+	<!-- END l-thumbnails-->
+	
+</div></div>
+<!-- END dashboard-->
+
+<div class="rapoverlay"></div>
+<!-- ================================ -->
+
+<!--         .__       .__                      __                .__
+  _____ |__| ____ |__|___________  _______/  |_  ____   ____ |  |
+ /     \|  |/    \|  \_  __ \__  \ \____ \   __\/  _ \ /  _ \|  |
+|  Y Y  \  |   |  \  ||  | \// __ \|  |_> >  | (  <_> |  <_> )  |__
+|__|_|  /__|___|  /__||__|  (____  /   __/|__|  \____/ \____/|____/
+      \/        \/               \/|__|
+ -->
+
+
+
+<div class="minirap">
+	<div class="minirap__title">
+		<div class="minirap__fave"></div>Urban Outlaw Documentary
+	</div>
+	<div class="minirap__prev"></div>
+	<div class="minirap__next"></div>
+	<div class="minirap__close"></div>
+	<!-- BEGIN MEDIA -->
+	<div class="minirap__media">
+		<img src="img/media.png" alt="">
+	</div>
+	<!-- END MEDIA -->
+	
+	
+	<!-- BEGIN  minirap__aside-->
+	<div class="minirap__aside">
+		<ul class="minirap__switch">
+			<li><a href="#" class="is-active">info</a></li>
+			<li><a href="#">discuss</a></li>
+		</ul>
+		<div class="minirap__meta">
+			<div class="minirap__publicstatus">Public conversation</div>
+			<div class="minirap__morelink">More</div>
+		</div>
+		
+		<div class="minirap__conversations">
+			<div class="conversation">
+				<div class="conversation__author"><div class="conversation__authorstatus is-online"></div> Darren_wgn@asd.ads</div>
+				<div class="conversation__content">
+					Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cupiditate quidem dolore eius
+				</div>
+			</div>
+		</div>
+		
+		
+		
+		<div class="minirap__tools">
+			<!-- BEGIN  miniraptoolbar-->
+			<div class="miniraptoolbar">
+				<div class="miniraptoolbar__pencil"></div>
+				<div class="miniraptoolbar__line"></div>
+				<div class="miniraptoolbar__rect"></div>
+				<div class="miniraptoolbar__round"></div>
+				<div class="miniraptoolbar__arrow"></div>
+				<!-- <div class="miniraptoolbar__crop"></div> -->
+				<div class="miniraptoolbar__sep"></div>
+				<div class="miniraptoolbar__colors">
+					<i class="miniraptoolbar__color is-active" style="background:#7fc430"></i> <i class="icon-drop"></i>
+					<div class="miniraptoolbar__drop">
+						<div class="miniraptoolbar__color" style="background:#7fc430;"></div>
+						<div class="miniraptoolbar__color" style="background:#e9008c;"></div>
+						<div class="miniraptoolbar__color" style="background:#0074ba;"></div>
+						<div class="miniraptoolbar__color" style="background:#79e6d2;"></div>
+						<div class="miniraptoolbar__color" style="background:#ffffff;"></div>
+						<div class="miniraptoolbar__color" style="background:#000000;"></div>
+					</div>
+				</div>
+				<div class="miniraptoolbar__brushes">
+					<i class="miniraptoolbar__brush miniraptoolbar__brush1 is-active"></i> <i class="icon-drop"></i>
+					
+					<div class="miniraptoolbar__drop">
+						<div class="miniraptoolbar__brush miniraptoolbar__brush1"></div>
+						<div class="miniraptoolbar__brush miniraptoolbar__brush2"></div>
+						<div class="miniraptoolbar__brush miniraptoolbar__brush3"></div>
+						<div class="miniraptoolbar__brush miniraptoolbar__brush4"></div>
+						<div class="miniraptoolbar__brush miniraptoolbar__brush5"></div>
+						<div class="miniraptoolbar__brush miniraptoolbar__brush6"></div>
+					</div>
+				</div>
+			</div>
+			<!-- END miniraptoolbar-->
+
+			
+		</div>
+		<div class="minirap__add">
+			<div class="minirap__toolstoggle is-active"><div class="minirap__toolstoggleicon"></div></div>
+			<input type="text" class="minirap__messagebox">
+			<div class="minirap__submit"></div>
+		</div>
+		<div class="minirap__moartoggle">
+			More info <i class="minirap__moartoggleicon"></i>
+		</div>
+		
+	</div>
+	<!-- END minirap__aside-->
+	
+	
+	<!-- BEGIN MOAR -->
+	<div class="minirap__moar moar">
+		<div class="moar__aside">
+			<h3>Tags</h3>
+			<p>something</p>
+		</div>
+		<div class="moar__main">
+			<h3>Technical metadata</h3>
+			<!-- begin col -->
+			<div class="col">
+			<dl class="metadata">
+				<dt>General</dt>
+				<dd>
+					<ul>
+						<li>Format: image/jpeg</li>
+						<li>XResolution: 72</li>
+						<li>ImageHeight: 533</li>
+						<li>YResolution: 72</li>
+						<li>FileType: JPEG</li>
+						<li>ImageWidth: 800</li>
+						<li>FileName: 8f1fa82b-b8bd-4aed-b5c7-9cdedfadc31f.jpg</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="metadata">
+				<dt class="metadata__active">General</dt>
+				<dd style="display:none">
+					<ul>
+						<li>Format: image/jpeg</li>
+						<li>XResolution: 72</li>
+						<li>ImageHeight: 533</li>
+						<li>YResolution: 72</li>
+						<li>FileType: JPEG</li>
+						<li>ImageWidth: 800</li>
+						<li>FileName: 8f1fa82b-b8bd-4aed-b5c7-9cdedfadc31f.jpg</li>
+					</ul>
+				</dd>
+			</dl>
+			</div>
+			<div class="col">
+			<dl class="metadata">
+				<dt>General</dt>
+				<dd>
+					<ul>
+						<li>Format: image/jpeg</li>
+						<li>XResolution: 72</li>
+						<li>ImageHeight: 533</li>
+						<li>YResolution: 72</li>
+						<li>FileType: JPEG</li>
+						<li>ImageWidth: 800</li>
+						<li>FileName: 8f1fa82b-b8bd-4aed-b5c7-9cdedfadc31f.jpg</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="metadata">
+				<dt class="metadata__active">General</dt>
+				<dd style="display:none">
+					<ul>
+						<li>Format: image/jpeg</li>
+						<li>XResolution: 72</li>
+						<li>ImageHeight: 533</li>
+						<li>YResolution: 72</li>
+						<li>FileType: JPEG</li>
+						<li>ImageWidth: 800</li>
+						<li>FileName: 8f1fa82b-b8bd-4aed-b5c7-9cdedfadc31f.jpg</li>
+					</ul>
+				</dd>
+			</dl>
+			</div>
+			<!-- end col -->
+			<!-- begin col -->
+			<div class="col">
+			<dl class="metadata">
+				<dt>General</dt>
+				<dd>
+					<ul>
+						<li>Format: image/jpeg</li>
+						<li>XResolution: 72</li>
+						<li>ImageHeight: 533</li>
+						<li>YResolution: 72</li>
+						<li>FileType: JPEG</li>
+						<li>ImageWidth: 800</li>
+						<li>FileName: 8f1fa82b-b8bd-4aed-b5c7-9cdedfadc31f.jpg</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="metadata">
+				<dt class="metadata__active">General</dt>
+				<dd style="display:none">
+					<ul>
+						<li>Format: image/jpeg</li>
+						<li>XResolution: 72</li>
+						<li>ImageHeight: 533</li>
+						<li>YResolution: 72</li>
+						<li>FileType: JPEG</li>
+						<li>ImageWidth: 800</li>
+						<li>FileName: 8f1fa82b-b8bd-4aed-b5c7-9cdedfadc31f.jpg</li>
+					</ul>
+				</dd>
+			</dl>
+			</div>
+			<div class="col">
+			<dl class="metadata">
+				<dt>General</dt>
+				<dd>
+					<ul>
+						<li>Format: image/jpeg</li>
+						<li>XResolution: 72</li>
+						<li>ImageHeight: 533</li>
+						<li>YResolution: 72</li>
+						<li>FileType: JPEG</li>
+						<li>ImageWidth: 800</li>
+						<li>FileName: 8f1fa82b-b8bd-4aed-b5c7-9cdedfadc31f.jpg</li>
+					</ul>
+				</dd>
+			</dl>
+			<dl class="metadata">
+				<dt class="metadata__active">General</dt>
+				<dd style="display:none">
+					<ul>
+						<li>Format: image/jpeg</li>
+						<li>XResolution: 72</li>
+						<li>ImageHeight: 533</li>
+						<li>YResolution: 72</li>
+						<li>FileType: JPEG</li>
+						<li>ImageWidth: 800</li>
+						<li>FileName: 8f1fa82b-b8bd-4aed-b5c7-9cdedfadc31f.jpg</li>
+					</ul>
+				</dd>
+			</dl>
+			</div>
+			<!-- end col -->
+		</div>
+		
+	</div>
+	<!-- END MOAR -->
+</div>
+
+</body>
+</html>

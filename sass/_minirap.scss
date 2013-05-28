@@ -146,6 +146,7 @@
 	text-transform: uppercase;
 	padding-bottom: 5px;
 	margin: 0 7px;
+	margin-bottom: 15px;
 	.minirap__publicstatus{
 		
 	}
@@ -503,3 +504,89 @@
 		}
 	}
 }
+
+#video{
+	position: relative;
+	.video__controls{
+		position: absolute;
+		height: 30px;
+		background: rgba(#000, .5);
+		border-radius: 30px;
+		bottom: 18px;
+		right: 40px;
+		left: 40px;
+		height: 30px;
+	}
+	.video__playpause{
+		@include s($icons, pause);
+		position: absolute;
+		top: 11px;
+		left: 16px;
+		cursor: pointer;
+	}
+	.video__marker{
+		position: absolute;
+		top: -17px;
+		@include s($icons, marker);
+		cursor: pointer;
+	}
+	.video__hd{
+		font-size: 9px;
+		color: #FFF;
+		top: 10px;
+		right: 65px;
+		line-height: 1;
+		position: absolute;
+	}
+	.video__fullscreen{
+		top: 10px;
+		right: 15px;
+		position: absolute;
+		cursor: pointer;
+		@include s($icons, fullscreen);
+	}
+	.video__volume{
+		position: absolute;
+		cursor: pointer;
+		@include s($icons, volume);
+		right: 40px;
+		top: 11px;
+	}
+	.video__track{
+		position: absolute;
+		left: 67px;
+		top: 14px;
+		right: 120px;
+		height: 2px;
+		background: #FFF;
+	}
+	.video__trackcurrent{
+		width: 8px;
+		height: 8px;
+		top: -3px;
+		background: #fff;
+		box-shadow:0 0 10px rgba(#fff, 1);
+		position: absolute;
+		border-radius: 10px;
+		cursor: pointer;
+	}
+	.video__timeleft, .video__timecurrent{
+		font-size: 9px;
+		color: #fff;
+		position: absolute;
+		top: -5px;
+		left: -31px;
+	}
+	.video__timeleft{
+		right: -31px;
+		left: auto;
+	}
+}
+
+
+
+
+
+
+
+

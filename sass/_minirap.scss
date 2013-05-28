@@ -44,7 +44,7 @@
 		right: 0;
 		width: 1200px;
 		margin: 0 auto;
-		height: 559px;
+		height: 559px - 48px;
 		margin-top: 20px;
 		z-index: 1;
 		.minirap__title{
@@ -209,6 +209,9 @@
 .minirap__conversations{
 	height: 600px;
 	overflow: auto;
+	.b-minirapstatic &{
+		height: 320px;
+	}
 }
 .conversation{
 	padding: 6px 10px;

@@ -369,6 +369,7 @@
 	min-height: 300px;
 	border-radius: 6px;
 	text-align: center;
+	z-index: 1000;
 	ul{
 		list-style: none;
 		padding-top: 11px;
@@ -394,7 +395,7 @@
 	}
 	.toolbar__separator{
 		border-top: 1px solid #666666;
-		margin: 10px 3px;
+		margin: 10px 3px 16px 3px;
 	}
 
 	@each $s in play, fave, share, download, delete{
@@ -403,6 +404,20 @@
 			@include s($icons, #{$s});
 			cursor: pointer;
 		}
+	}
+	@each $s in video, audio, videorap, audiorap, merge, queue{
+		.toolbar__#{$s}{
+			display: inline-block;
+			@include s($icons, #{$s});
+			cursor: pointer;
+			margin-bottom: 16px;
+			&:hover{
+				@include s($icons, #{$s}h);
+			}
+		}
+	}
+	.is-disabled{
+		opacity: .6;
 	}
 }
 .files{
